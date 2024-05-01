@@ -1,5 +1,6 @@
 // IMPORTS
-import "@/styles/configs/reset.scss";
+import "@/styles/main.scss";
+import Site from "@/components/layouts/site/site";
 
 // METADATA
 const metadata = {

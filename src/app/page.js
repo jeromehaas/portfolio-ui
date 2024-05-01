@@ -1,11 +1,13 @@
+// IMPORTS
+import Section from "@/components/layouts/section/section";
+
 // START
 const Start = () => {
 
 	// RENDER
   return (
-    <main>
-			hello world!
-		</main>
+		<Section>
+		</Section>
   );
 
 };
