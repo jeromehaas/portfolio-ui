@@ -6,7 +6,7 @@ const Section = ({ children }) => {
 
 	// RENDER
 	return (
-		<main className="section">
+		<main className="section grid">
 			{ children }
 		</main>
 	);

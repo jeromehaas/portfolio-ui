@@ -1,0 +1,63 @@
+@import '@/styles/configs/variables.scss';
+
+.site {
+	max-width: 1200px;
+	margin: 160px auto;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-gap: 24px;
+
+	&__navigation, .navigation {
+		background-color: $white-100;
+		display: flex;
+		flex-direction: column;
+		width: auto;
+		padding: 8px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+		border-radius: 4px;
+
+		&__item {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 40px;
+			height: 100%;
+			margin-bottom: 8px;
+			white-space: nowrap;
+			border-radius: 4px;
+			text-transform: uppercase;
+			transition: all 0.3s ease;
+			cursor: pointer;
+
+			&--active {
+				background-color: $grey-40;
+			}
+
+			&:hover {
+				background-color: $grey-40;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+		}
+
+		&__link {
+			transform: rotate(-90deg);
+			background-color: inherit;
+			margin-left: 4px;
+		}
+
+	}
+
+	&__content {
+		
+	}
+
+}
