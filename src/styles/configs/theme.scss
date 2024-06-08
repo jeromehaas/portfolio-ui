@@ -1,0 +1,163 @@
+.dark {
+	background-color: $grey-100;
+
+	.card {
+		background-color: $grey-80;
+		box-shadow: transparentize($grey-100, 0.9) 0 1px 0, transparentize($grey-100, 0.9) 0 8px 24px, transparentize($grey-100, 0.9) 0 16px 48px;
+	}
+
+	.heading {
+		color: $white-100;
+	}
+
+	.tapper {
+
+		&__background {
+			background-color: $grey-100;
+		}
+
+		&__icon, .icon {
+
+			&__path {
+				fill: $white-100;
+			}
+
+		}
+
+	}
+
+	.text-input {
+		border: 1px solid $grey-80;
+
+		&__field {
+			background-color: $grey-100;
+
+			&::placeholder {
+				color: $grey-40
+			}
+
+		}
+
+	}
+
+	.text-area {
+		border: 1px solid $grey-80;
+
+		&__field {
+			background-color: $grey-100;
+
+			&::placeholder {
+				color: $grey-40
+			}
+
+		}
+
+		&__fake-field {
+			background-color: $grey-100;
+			display: block;
+
+			&::placeholder {
+				color: $grey-40
+			}
+
+		}
+
+	}
+
+	.paragraph {
+		color: $white-100;
+	}
+
+	.notification {
+
+		&__item {
+			background-color: $grey-80;
+		}
+
+	}
+
+	.navigation {
+		background-color: $grey-80;
+
+		&__link, .link {
+
+			&--active {
+				background-color: $grey-100;
+			}
+
+			&__label {
+				color: $white-100;
+			}
+
+		}
+
+	}
+
+	.icon {
+
+		&__connector, .connector {
+
+			&__circle {
+				stroke: $white-100;
+			}
+
+			&__path {
+				fill: $white-100;
+			}
+
+		}
+
+	}
+
+	.brand {
+
+		&__background {
+			background-color: $grey-100;
+		}
+
+	}
+
+	.logo {
+
+		&__background {
+			background-color: $grey-100;
+		}
+
+	}
+
+
+	.quote {
+
+		&__text {
+
+			&::before,
+			&::after {
+				color: transparentize($white-100, 0.85) !important;
+			}
+
+		}
+
+	}
+
+	.button {
+
+
+		&--dark {
+			background-color: $grey-100 !important;
+			border: 1px solid $grey-100;
+			color: $white-100 !important;
+		}
+
+		&--light {
+			background-color: $white-100;
+			border: 1px solid $white-100;
+			color: $grey-100;
+		}
+
+	}
+
+}
+
+.light {
+	background-color: $grey-40 !important;
+}

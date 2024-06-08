@@ -1,0 +1,79 @@
+h1, h2, h3, h4, h5, p, td, li, a, button {
+	font-family: Geomanist, monospace;
+	font-weight: 400;
+	position: relative;
+	z-index: 10;
+}
+
+input, textarea {
+	font-family: Geomanist, monospace;
+	font-weight: 800;
+	position: relative;
+	z-index: 10;
+}
+
+.heading {
+	letter-spacing: 0.05em;
+
+	&--h1 {
+		font-size: 32px;
+		font-weight: 600;
+		line-height: 1.1;
+	}
+
+	&--h2 {
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 1.1;
+		text-transform: uppercase;
+	}
+
+	&--h3 {
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 1.1;
+		margin-bottom: 8px;
+	}
+
+	&--h4 {
+		font-size: 16px;
+		font-weight: 800;
+		line-height: 1.1;
+		margin-bottom: 8px;
+	}
+
+}
+
+.paragraph {
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 1.3;
+}
+
+textarea::placeholder,
+input::placeholder {
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 1.3;
+}
+
+.button {
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 0.05em;
+	line-height: 1.3;
+}
+
+
+.navigation {
+
+	&__link, .link {
+
+		&__label {
+			font-weight: 400;
+			letter-spacing: 0.05em;
+		}
+
+	}
+
+}

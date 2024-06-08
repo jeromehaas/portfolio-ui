@@ -2,5 +2,13 @@
 
 body {
 	background-color: #ECECEC;
+	height: 100%;
+	overflow: hidden;
 }
 
+*::selection {
+	background: transparentize($blue-100, 0.85);
+	opacity: 0.1;
+	text-decoration: 4px underline $blue-100;
+	text-underline: 2px solid $blue-100
+}
