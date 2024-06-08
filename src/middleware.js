@@ -1,0 +1,67 @@
+// IMPORTS
+import {NextResponse} from 'next/server';
+
+// GET RESPONSE METHODS
+const {next, redirect, rewrite} = NextResponse;
+
+// DEFINE LOCALES
+let locales = ['en', 'de', 'ch'];
+
+// MIDDLEWARE
+export function middleware(request) {
+	
+	// GET URL
+	const url = request.nextUrl.clone();
+	
+	// GET PATHNAME
+	const {pathname} = url;
+	
+	// GET COOKIES
+	const {cookies} = request;
+	
+	// GET LANGUAGE
+	const language = cookies.get('lang')?.value || 'en';
+	
+	// GET THEME
+	const theme = cookies.get('theme')?.value || 'light';
+	
+	// CHECK IF LOCALE IS AVAILABLE
+	const pathnameHasLocale = locales.some((locale) => {
+		return pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`;
+	});
+	
+	const pathnameHasTheme = url.searchParams.get('theme');
+	
+	// IF NO LOCALE IS SET
+	if (!pathnameHasLocale) {
+		
+		// CREATE PATH
+		const path = new URL(`/${language}${pathname}`, url);
+		
+		// REDIRECT
+		return redirect(path);
+		
+	}
+	
+	// IF NO LOCALE IS SET
+	if (!pathnameHasTheme) {
+		
+		// CREATE PATH
+		url.searchParams.set('theme', theme);
+		
+		// REDIRECT
+		return redirect(url);
+		
+	}
+	
+}
+
+// EXPORTS
+export const config = {
+	
+	// MATCHER
+	matcher: [
+		'/((?!api|_next/static|_next/image|favicon.ico|fonts|public|graphics|images|logos|brands|references|devicons).*)',
+	],
+	
+};
