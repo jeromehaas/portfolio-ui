@@ -1,30 +1,27 @@
 // IMPORTS
-import "@/styles/main.scss";
-import Site from "@/components/layouts/site/site";
+import '@/styles/main.scss';
 
 // METADATA
 const metadata = {
-  title: "Jerome Haas",
-  description: "",
+	title: 'Jerome Haas',
+	description: '',
 };
 
-// LAYOUT
-const RootLayout = ({ children }) => {
-
+// ROOT-LAYOUT
+const RootLayout = async({children}) => {
+	
 	// RENDER
-  return (
-    <html lang="en">
-      <body>
-				<Site>
-					{ children }
-				</Site>
-			</body>
-    </html>
-  );
-
+	return (
+	<html>
+		<body>
+			{children}
+		</body>
+	</html>
+	);
+	
 };
 
 // EXPORTS
-export { metadata };
+export {metadata};
 export default RootLayout;
 
