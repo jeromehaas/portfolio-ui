@@ -1,0 +1,17 @@
+@import '@/styles/configs/variables.scss';
+
+.icon {
+
+	&__connector, .connector {
+
+		&__circle {
+			stroke: $black-100;
+		}
+
+		&__path {
+			fill: $black-100;
+		}
+
+	}
+
+}

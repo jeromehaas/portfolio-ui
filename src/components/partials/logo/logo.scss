@@ -1,0 +1,84 @@
+@import '@/styles/configs/variables.scss';
+
+.logo {
+	display: block;
+	height: 64px;
+	min-width: 64px;
+	overflow: hidden;
+	position: relative;
+	width: 64px;
+
+	&__background {
+		background-color: $grey-40;
+		border-radius: 50%;
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	&__icon, .icon {
+		height: 30px;
+		left: 50%;
+		object-fit: scale-down;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 30px;
+
+		//  &--arcmedia {
+		//
+		//    .icon {
+		//
+		//      &__letter {
+		//        fill: #000000;
+		//      }
+		//
+		//      &__circle {
+		//        fill: #2AE687;
+		//      }
+		//
+		//    }
+		//
+		//  }
+		//
+		//  &--haas-web-solutions {
+		//
+		//    .icon {
+		//
+		//      &__square {
+		//        fill: #000000;
+		//      }
+		//
+		//    }
+		//
+		//  }
+		//
+		//  &--swiss-army {
+		//
+		//    .icon {
+		//
+		//      &__form {
+		//        fill: #000000;
+		//      }
+		//
+		//    }
+		//
+		//  }
+		//
+		//  &--calydo {
+		//
+		//    .icon {
+		//
+		//      &__form {
+		//        fill: #26CAD3;
+		//      }
+		//
+		//    }
+		//
+		//  }
+		//
+	}
+
+}

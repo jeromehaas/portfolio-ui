@@ -1,3 +1,19 @@
 .hello-experiences {
+	display: flex;
+	flex-direction: column;
 	grid-area: 3 / 8 / 5 / 13;
+
+	&__title {
+		margin-bottom: 8px;
+	}
+
+	&__connector {
+		align-self: flex-end;
+		margin-top: auto;
+	}
+
+	@media (max-width: 1300px) {
+		display: none;
+	}
+
 }

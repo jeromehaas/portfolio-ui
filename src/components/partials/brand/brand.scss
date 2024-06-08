@@ -1,0 +1,28 @@
+@import '@/styles/configs/variables.scss';
+
+.brand {
+	display: block;
+	height: 80px;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+
+	&__background {
+		background-color: $grey-40;
+		border-radius: 4px;
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	&__icon, .icon {
+		height: 100%;
+		object-fit: scale-down;
+		padding: 24px;
+		position: absolute;
+		width: 100%;
+	}
+
+}

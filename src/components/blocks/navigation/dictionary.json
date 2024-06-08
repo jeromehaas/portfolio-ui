@@ -1,0 +1,23 @@
+{
+	"en": {
+		"hello": "Hello",
+		"experiences": "Experiences",
+		"tech-stack": "Tech-Stack",
+		"contact": "Contact",
+		"work": "Work"
+	},
+	"de": {
+		"hello": "Hallo",
+		"experiences": "Erfahrungen",
+		"tech-stack": "Tech-Stack",
+		"contact": "Kontakt",
+		"work": "Arbeiten"
+	},
+	"ch": {
+		"hello": "Grüezi",
+		"experiences": "Erfahrige",
+		"tech-stack": "Tech-Stack",
+		"contact": "Kontakt",
+		"work": "Arbetä"
+	}
+}

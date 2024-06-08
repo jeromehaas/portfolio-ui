@@ -1,0 +1,38 @@
+@import '@/styles/configs/variables.scss';
+
+.quote {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
+
+	&__text {
+		display: inline;
+		z-index: 10;
+
+		&::before,
+		&::after {
+			color: transparentize($black-100, 0.95);
+			font-size: 160px;
+			position: absolute;
+			z-index: -10;
+		}
+
+		&::before {
+			content: '«';
+			left: -24px;
+			line-height: 80px;
+			top: -40px;
+		}
+
+		&::after {
+			bottom: -120px;
+			content: '»';
+			line-height: 80px;
+			right: -24px;
+		}
+
+	}
+
+}

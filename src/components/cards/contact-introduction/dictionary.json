@@ -1,0 +1,14 @@
+{
+	"en": {
+		"title": "Say hello!",
+		"text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam sint rerum hic cum explicabo culpa, reiciendis eveniet modi delectus minima molestias labore vel eligendi molestiae aspernatur quos placeat. Pariatur, sapiente?"
+	},
+	"de": {
+		"title": "Sag Hallo!",
+		"text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam sint rerum hic cum explicabo culpa, reiciendis eveniet modi delectus minima molestias labore vel eligendi molestiae aspernatur quos placeat. Pariatur, sapiente?"
+	},
+	"ch": {
+		"title": "Säg Hallo",
+		"text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam sint rerum hic cum explicabo culpa, reiciendis eveniet modi delectus minima molestias labore vel eligendi molestiae aspernatur quos placeat. Pariatur, sapiente?"
+	}
+}

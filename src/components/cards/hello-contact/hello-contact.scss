@@ -1,3 +1,15 @@
 .hello-contact {
+	display: flex;
+	flex-direction: column;
 	grid-area: 7 / 10 / 9 / 13;
+
+	&__connector {
+		align-self: flex-end;
+		margin-top: auto;
+	}
+
+	@media (max-width: 1300px) {
+		grid-area: 6 / 10 / 9 / 13;
+	}
+
 }

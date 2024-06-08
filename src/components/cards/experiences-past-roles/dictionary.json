@@ -1,0 +1,167 @@
+{
+	"en": {
+		"items": [
+			{
+				"id": "swiss-army",
+				"role": "Transmission Specialist",
+				"company": "Swiss Army",
+				"date": "2023 - 2024",
+				"description": "After two months of training, I joined the Swisscoy troops as a transmission specialist. In the Movement Control department, I ensured stable radio communication and provided first and second-level IT support.",
+				"connector": {
+					"link": "/references/swiss-army.pdf"
+				}
+			},
+			{
+				"id": "haas-web-solutions",
+				"role": "Founder",
+				"company": "haas web solutions",
+				"date": "2023 - today",
+				"description": "Recognizing high demand, I founded Haas Web Solutions as a freelancer. I developed custom websites and applications, collaborating with a network of freelancers to deliver quality projects.",
+				"connector": {
+					"link": "/references/swiss-army.pdf"
+				}
+			},
+			{
+				"id": "calydo",
+				"role": "Frontend Developer",
+				"company": "Calydo AG",
+				"date": "2021 - 2022",
+				"description": "At Calydo, an agency for communication and marketing solutions, I developed and maintained websites and web applications. I created user-friendly interfaces and ensured the functionality of digital platforms.",
+				"connector": {
+					"link": "/references/calydo.pdf"
+				}
+			},
+			{
+				"id": "codeworks",
+				"role": "Student",
+				"company": "Codeworks",
+				"date": "2023 - 2024",
+				"description": "Codeworks is an intensive coding bootcamp where I gained the skills to become a software engineer. Through 1000 hours of training and hands-on projects, I mastered advanced programming concepts.",
+				"connector": {
+					"link": "/references/codeworks.pdf"
+				}
+			},
+			{
+				"id": "arcmedia",
+				"role": "Frontend Developer / System Administrator",
+				"company": "Arcmedia AG",
+				"date": "2020 - 2022",
+				"description": "At Arcmedia, a company for e-commerce solutions and email marketing, I managed the infrastructure and developed embedded forms for clients' websites, enhancing the integration of email marketing systems.",
+				"connector": {
+					"link": "/references/arcmedia.pdf"
+				}
+			}
+		]
+	},
+	"de": {
+		"items": [
+			{
+				"id": "swiss-army",
+				"role": "Übermittlungs-Spezialist",
+				"company": "Swiss Army",
+				"date": "2023 - 2024",
+				"description": "Nach einer zweimonatigen Ausbildung schloss ich mich den Swisscoy-Truppen als Übertragungsspezialist an. In der Movement Control Abteilung stellte ich eine stabile Funkkommunikation sicher und leistete IT-Support der ersten und zweiten Ebene.",
+				"connector": {
+					"link": "/references/swiss-army.pdf"
+				}
+			},
+			{
+				"id": "haas-web-solutions",
+				"role": "Gründer",
+				"company": "haas web solutions",
+				"date": "2023 - heute",
+				"description": "Aufgrund der hohen Nachfrage gründete ich Haas Web Solutions als Freelancer. Ich entwickelte individuelle Websites und Anwendungen und arbeitete mit einem Netzwerk von Freelancern zusammen, um hochwertige Projekte zu realisieren.\n\n",
+				"connector": {
+					"link": "/references/swiss-army.pdf"
+				}
+			},
+			{
+				"id": "calydo",
+				"role": "Frontend Developer / System Administrator",
+				"company": "Calydo AG",
+				"date": "2021 - 2022",
+				"description": "Bei Calydo, einer Agentur für Kommunikations- und Marketinglösungen, entwickelte und pflegte ich Websites und Webanwendungen. Ich erstellte benutzerfreundliche Schnittstellen und stellte die Funktionalität digitaler Plattformen sicher.",
+				"connector": {
+					"link": "/references/calydo.pdf"
+				}
+			},
+			{
+				"id": "codeworks",
+				"role": "Student",
+				"company": "Codeworks",
+				"date": "2023 - 2024",
+				"description": "Codeworks ist ein intensives Coding-Bootcamp, bei dem ich die Fähigkeiten zum Software-Ingenieur erlangte. Durch 1000 Stunden Ausbildung und praktische Projekte beherrschte ich fortgeschrittene Programmierkonzepte.",
+				"connector": {
+					"link": "/references/codeworks.pdf"
+				}
+			},
+			{
+				"id": "arcmedia",
+				"role": "Frontend Developer / System Administrator",
+				"company": "Arcmedia AG",
+				"date": "2020 - 2021",
+				"description": "Bei Arcmedia, einem Unternehmen für E-Commerce-Lösungen und E-Mail-Marketing, verwaltete ich die Infrastruktur und entwickelte eingebettete Formulare für die Websites der Kunden, um die Integration von E-Mail-Marketing-Systemen zu verbessern.",
+				"connector": {
+					"link": "/references/arcmedia.pdf"
+				}
+			}
+		]
+	},
+	"ch": {
+		"items": [
+			{
+				"id": "swiss-army",
+				"role": "Übermittligs-Spezialist",
+				"company": "Swiss Army",
+				"date": "2023 - 2024",
+				"description": "Nachere zweimonatige Usbildig hani mech de Swisscoy-Truppe als Übermittligs-Spezialist ahgschlosse. I de Abteilig Movment-Control hani en stabile Funkkommunikation sichergstellt und han IT-Support uf de erste und zweite Ebeni gleistet.",
+				"connector": {
+					"link": "/references/swiss-army.pdf"
+				}
+			},
+			{
+				"id": "haas-web-solutions",
+				"role": "Gründer",
+				"company": "haas web solutions",
+				"date": "2023 - hüt",
+				"description-depr": "Aufgrund der hohen Nachfrage gründete ich Haas Web Solutions als Freelancer. Ich entwickelte individuelle Websites und Anwendungen und arbeitete mit einem Netzwerk von Freelancern zusammen, um hochwertige Projekte zu realisieren.",
+				"description": "Ufgrund de hohe Nahfrag hand es Einzel-Unternehme gründet. Ich han individuelle Websites und Ahwendige entwicklet und han mit mim Netzwerk von Freelancer zemegschafft, um hochwertige Projekt z'realisiere.",
+				"connector": {
+					"link": "/references/swiss-army.pdf"
+				}
+			},
+			{
+				"id": "calydo",
+				"role": "Frontend Developer",
+				"company": "Calydo AG",
+				"date": "2021 - 2022",
+				"description": "Bi Calydo, än Agentur für Kommunikations- und Marketinglösige, hani Websites und Webanwendungen entwicklet und gwartet. Ich han benutzerfründlichi Schnittstellen entwicklet und han d'Funktionalität vo digitaler Plattformen sichergstellt.",
+				"connector": {
+					"link": "/references/calydo.pdf"
+				}
+			},
+			{
+				"id": "codeworks",
+				"role": "Student",
+				"company": "Codeworks",
+				"date": "2023 - 2024",
+				"description-depr": "Codeworks ist ein intensives Coding-Bootcamp, bei dem ich die Fähigkeiten zum Software-Ingenieur erlangte. Durch 1000 Stunden Ausbildung und praktische Projekte beherrschte ich fortgeschrittene Programmierkonzepte.",
+				"description": "Codeworks isch es intensivs Coding-Bootcamp, wo ich d'Fähigkeite zum Software-Ingeneur erlang han. Während über 1000 Stunde Usbildig und praktische Projekt hand fortgschrittnige Programmierkenntniss erlernt.",
+				"connector": {
+					"link": "/references/codeworks.pdf"
+				}
+			},
+			{
+				"id": "arcmedia",
+				"role": "Frontend Developer / System Administrator",
+				"company": "Arcmedia AG",
+				"date": "2020 - 2021",
+				"description-depr": "Bei Arcmedia, einem Unternehmen für E-Commerce-Lösungen und E-Mail-Marketing, verwaltete ich die Infrastruktur und entwickelte eingebettete Formulare für die Websites der Kunden, um die Integration von E-Mail-Marketing-Systemen zu verbessern.",
+				"description": "Bi de Arcmedia, äs Unternehmä für E-Commerce-Lösungen und E-Mail-Marketing, hani d'Infrastruktur verwaltet und han eingebettete Formulare für die Websites der Kunden entwicklet, um d'Integration vom E-Mail-Marketing-Systemen z'ermögliche.",
+				"connector": {
+					"link": "/references/arcmedia.pdf"
+				}
+			}
+		]
+	}
+}

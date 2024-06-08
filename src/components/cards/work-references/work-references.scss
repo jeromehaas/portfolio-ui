@@ -1,3 +1,30 @@
 .work-references {
-	grid-area: 3 / 1 / 9 / 13;
+	//grid-area: 3 / 1 / 9 / 13;
+	//display: grid;
+	display: flex;
+	flex-direction: column;
+	grid-column: span 3;
+	grid-row: span 4;
+
+	&__logo {
+		margin-bottom: 24px;
+	}
+
+	&__metadata, .metadata {
+		margin-bottom: 24px;
+
+		&__title {
+
+		}
+
+		&__year {
+		}
+
+	}
+
+	&__connector {
+		align-self: end;
+		margin-top: auto;
+	}
+
 }

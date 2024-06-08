@@ -1,36 +1,29 @@
 // IMPORTS
 import './site.scss';
-import Link from 'next/link';
+import Navigation from '@/components/blocks/navigation/navigation';
+import Content from '@/components/blocks/content/content';
+import {getTheme} from '@/actions/theme';
+import Notification from '@/components/blocks/notification/notification';
 
 // SITE
-const Site = ({ children }) => {
-
+const Site = async({children}) => {
+	
+	// GET THEME
+	const theme = await getTheme();
+	
 	// RENDER
 	return (
-		<div className="site">
-			<nav className="site__navigation navigation">
-				<div className="navigation__item">
-					<Link className="navigation__link" href="/">Hello</Link> 
-				</div>
-				<div className="navigation__item">
-					<Link className="navigation__link" href="/experiences">Experiences</Link> 
-				</div>
-				<div className="navigation__item">
-					<Link className="navigation__link" href="/tech-stack">Tech Stack</Link> 
-				</div>
-				<div className="navigation__item">
-					<Link className="navigation__link" href="/contact">Contact</Link> 
-				</div>
-				<div className="navigation__item">
-					<Link className="navigation__link" href="work">Work</Link> 
-				</div>
-			</nav>
-			<main className="site__content">
-				{ children }
-			</main>
+	<div className={`site ${theme === 'light' ? 'light' : 'dark'} transition`}>
+		<div className='site__container'>
+			<Notification className='site__notification'/>
+			<Navigation className='site__navigation'/>
+			<Content className='site__content'>
+				{children}
+			</Content>
 		</div>
+	</div>
 	);
-
+	
 };
 
 // EXPORTS

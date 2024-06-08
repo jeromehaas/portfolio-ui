@@ -1,6 +1,17 @@
 @import '@/styles/configs/variables.scss';
 
 .card {
-	padding: 24px;
 	background-color: $white-100;
+	border-radius: 4px;
+	box-shadow: transparentize($black-100, 0.9) 0 1px 0, transparentize($black-100, 0.9) 0 8px 24px, transparentize($black-100, 0.9) 0 16px 32px;
+	opacity: 0;
+	overflow: hidden;
+	padding: 24px;
+	position: relative;
+	top: 24px;
+
+	&--dark {
+		background-color: black;
+	}
+
 }

@@ -1,17 +1,18 @@
 // IMPORTS
 import './section.scss';
+import {forwardRef} from 'react';
 
 // SECTION
-const Section = ({ children }) => {
-
+const Section = forwardRef(({className = '', children = null}, ref) => {
+	
 	// RENDER
 	return (
-		<main className="section grid">
-			{ children }
-		</main>
+	<div className={`${className} section`} ref={ref}>
+		{children}
+	</div>
 	);
-
-};
+	
+});
 
 // EXPORTS
 export default Section;

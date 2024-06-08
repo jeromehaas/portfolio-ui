@@ -1,0 +1,14 @@
+{
+	"en": {
+		"title": "Some of my favorite projects",
+		"text": "Lorem ipsum dolor sit amet."
+	},
+	"de": {
+		"title": "Einige meiner Lieblings-Projekte",
+		"text": "Lorem ipsum dolor sit amet."
+	},
+	"ch": {
+		"title": "Es paar vo mine Lieblings-Projekt.",
+		"text": "Lorem ipsum dolor sit amet."
+	}
+}

@@ -1,0 +1,9 @@
+@import '@/styles/configs/variables.scss';
+
+.heading {
+
+	&--highlighted {
+		color: $blue-100;
+	}
+
+}

@@ -1,0 +1,29 @@
+{
+	"en": {
+		"title": "Hello World!",
+		"subtitle": "My Name is Jérôme Haas and I love to build smart solutions for the web.",
+		"text": "I wrote my first line of code seven years ago. Since then, I have been fascinated by this craft that not only solves problems but also builds digital bridges to connect people. As my interest lies in both user interface development and server development, I strive to become the best full-stack web developer I am capable of.",
+		"actions": {
+			"get-in-touch": "Get in touch",
+			"download-cv": "Download CV"
+		}
+	},
+	"de": {
+		"title": "Hallo Welt!",
+		"subtitle": "Mein Name ist Jérôme Haas und ich liebe es kluge Lösungen für das Web zu entwickeln.",
+		"text": "Meine erste Zeile Code schrieb ich vor sieben Jahren. Seitdem fasziniert mich dieses Handwerk, das nicht nur Problemlösungen ermöglicht, sondern auch digitale Brücken baut um Menschen miteinander zu verbinden. Da mein Interesse sowohl in der Entwicklung von Benutzeroberflächen als auch in der Serverentwicklung liegt, strebe ich danach, der beste Full-Stack-Webentwickler zu werden, zu dem ich fähig bin.",
+		"actions": {
+			"get-in-touch": "Kontakt aufnehmen",
+			"download-cv": "CV Herunterladen"
+		}
+	},
+	"ch": {
+		"title": "Hallo Wält!",
+		"subtitle": "Min Name esch Jérôme Haas und ech liebs schlaui Lösige fürs Web z'entwickle.",
+		"text": "Mini erst Ziile Code hani vor siebä Jahre gschribe. Sit dem fasziniert mich das Handwerk, wo ned nume Promblemlösige ermöglicht, sondern au digitali Brugge baut um Mänsche mitenand z'verbine. Da mis Interässe sowohl id e Entwicklig von Benutzeroberfläche als au i de Serverentwicklig liid, streb ich dena, de best Full-Stack-Webdeveloper z'werde, zu dem ich fähig bin.",
+		"actions": {
+			"get-in-touch": "Kontakt ufneh",
+			"download-cv": "CV Abeladä"
+		}
+	}
+}

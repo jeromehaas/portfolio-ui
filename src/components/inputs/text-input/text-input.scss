@@ -1,0 +1,29 @@
+@import '@/styles/configs/variables.scss';
+
+.text-input {
+	background-color: $grey-40;
+	border: 1px solid $grey-40;
+	border-radius: 4px;
+	width: 100%;
+
+	&__field {
+		background-color: inherit;
+		padding: 16px;
+		width: 100%;
+
+		&::placeholder {
+			color: $grey-60;
+		}
+
+	}
+
+	&__fake-field {
+		background-color: inherit;
+		width: 100%;
+	}
+
+	&--error {
+		border: 1px solid $red-100 !important;
+	}
+
+}

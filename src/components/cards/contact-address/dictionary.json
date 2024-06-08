@@ -1,0 +1,26 @@
+{
+	"en": {
+		"address": {
+			"name": "Jérôme Haas",
+			"street": "Bodenmatte 16a",
+			"town": "5647 Oberrüti",
+			"country": "Switzerland"
+		}
+	},
+	"de": {
+		"address": {
+			"name": "Jérôme Haas",
+			"street": "Bodenmatte 16a",
+			"town": "5647 Oberrüti",
+			"country": "Schweiz"
+		}
+	},
+	"ch": {
+		"address": {
+			"name": "Jérôme Haas",
+			"street": "Bodenmatte 16a",
+			"town": "5647 Oberrüti",
+			"country": "Schwiiz"
+		}
+	}
+}
