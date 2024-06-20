@@ -1,0 +1,23 @@
+.contact-form {
+	display: grid;
+	grid-gap: 24px;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto auto auto 1fr auto;
+
+	&__input, .input {
+
+		&:nth-child(5) {
+			height: 240px;
+		}
+
+		&--50 {
+			grid-column: span 1;
+		}
+
+		&--100 {
+			grid-column: span 2;
+		}
+
+	}
+
+}

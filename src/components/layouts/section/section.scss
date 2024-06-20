@@ -1,8 +1,8 @@
 .section {
 	display: grid;
+	grid-auto-flow: row dense;
 	grid-gap: 24px;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(8, 1fr);
-	min-height: 1100px;
 	padding: 0 40px 0 24px;
 }

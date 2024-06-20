@@ -1,10 +1,8 @@
-'use client';
-
 // IMPORTS
 import './card.scss';
 
 // CARD
-const Card = ({className, children}) => {
+const Card = ({className = '', children = null}) => {
 	
 	// RENDER
 	return (

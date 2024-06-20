@@ -2,16 +2,9 @@
 
 .icon {
 
-	&__connector, .connector {
-
-		&__circle {
-			stroke: $black-100;
-		}
-
-		&__path {
-			fill: $black-100;
-		}
-
+	&__source {
+		height: 100%;
+		width: 100%;
 	}
 
 }

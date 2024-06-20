@@ -1,0 +1,13 @@
+.curriculum-vitae {
+	grid-column: span 4;
+	grid-row: span 1;
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+	&__text {
+		margin-bottom: 24px;
+	}
+
+}

@@ -1,0 +1,8 @@
+@import '@/styles/configs/variables.scss';
+
+.highlight {
+	background: linear-gradient(to right, $green-100, $yellow-100);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

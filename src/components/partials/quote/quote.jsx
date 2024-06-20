@@ -3,7 +3,7 @@ import './quote.scss';
 import {H3} from '../heading/heading';
 
 // QUOTE
-const Quote = ({className, children}) => {
+const Quote = ({className = '', children = null}) => {
 	
 	// RENDER
 	return (

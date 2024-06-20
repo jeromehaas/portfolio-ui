@@ -2,7 +2,7 @@
 import './content.scss';
 
 // CONTENT
-const Content = ({className, children}) => {
+const Content = ({className = '', children = null}) => {
 	
 	// RENDER
 	return (

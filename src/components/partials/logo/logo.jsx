@@ -3,9 +3,10 @@
 // IMPORTS
 import './logo.scss';
 import {useSearchParams} from 'next/navigation';
+import Image from 'next/image';
 
-// ICON
-const Logo = ({className, type}) => {
+// LOGO
+const Logo = ({className = '', type = ''}) => {
 	
 	// BRING IN PARAMS
 	const params = useSearchParams();
@@ -17,21 +18,11 @@ const Logo = ({className, type}) => {
 	return (
 	<div className={`${className} logo`}>
 		<figure className='logo__background'/>
-		{type === 'arcmedia' ? (
-		<img className='logo__icon' src={`/logos/${theme === 'dark' ? 'light' : 'dark'}/arcmedia.png`} alt=''/>
-		) : null}
-		{type === 'swiss-army' ? (
-		<img className='logo__icon' src={`/logos/${theme === 'dark' ? 'light' : 'dark'}/swiss-army.png`} alt=''/>
-		) : null}
-		{type === 'calydo' ? (
-		<img className='logo__icon' src={`/logos/${theme === 'dark' ? 'light' : 'dark'}/calydo.png`} alt=''/>
-		) : null}
-		{type === 'codeworks' ? (
-		<img className='logo__icon' src={`/logos/${theme === 'dark' ? 'light' : 'dark'}/codeworks.png`} alt=''/>
-		) : null}
-		{type === 'haas-web-solutions' ? (
-		<img className='logo__icon' src={`/logos/${theme === 'dark' ? 'light' : 'dark'}/haas-web-solutions.png`} alt=''/>
-		) : null}
+		{type === 'arcmedia' ? <Image className='logo__icon' width={40} height={40} src={`/logos/${theme === 'dark' ? 'light' : 'dark'}/arcmedia.png`} alt='Arcmedia'/> : null}
+		{type === 'swiss-army' ? <Image className='logo__icon' width={40} height={40} src={`/logos/${theme === 'dark' ? 'light' : 'dark'}/swiss-army.png`} alt='Swiss Army'/> : null}
+		{type === 'calydo' ? <Image className='logo__icon' width={40} height={40} src={`/logos/${theme === 'dark' ? 'light' : 'dark'}/calydo.png`} alt='Calydo'/> : null}
+		{type === 'codeworks' ? <Image className='logo__icon' width={40} height={40} src={`/logos/${theme === 'dark' ? 'light' : 'dark'}/codeworks.png`} alt='Codeworks'/> : null}
+		{type === 'haas-web-solutions' ? <Image className='logo__icon' width={40} height={40} src={`/logos/${theme === 'dark' ? 'light' : 'dark'}/haas-web-solutions.png`} alt='haas web solutions'/> : null}
 	</div>
 	);
 	

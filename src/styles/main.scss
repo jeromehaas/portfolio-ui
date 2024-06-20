@@ -2,9 +2,20 @@
 @import './configs/reset.scss';
 @import './configs/scrollbar.scss';
 @import './configs/grid.scss';
+@import './configs/mapbox.scss';
 @import './configs/fonts.scss';
 @import './configs/globals.scss';
 @import './configs/typography.scss';
 @import './configs/transitions.scss';
 @import './configs/keyframes.scss';
 @import './configs/theme.scss';
+
+/* SWIPER */
+@import 'swiper/css';
+@import 'swiper/css/grid';
+@import 'swiper/css/pagination';
+@import 'swiper/css/effect-fade';
+@import 'swiper/css/navigation';
+
+/* MAPBOX */
+@import 'mapbox-gl/dist/mapbox-gl.css';

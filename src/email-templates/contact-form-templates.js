@@ -17,6 +17,7 @@ You have received a new message from your website contact form.
 Here are the details:
   Firstname: ${firstname}
   Lastname: ${lastname}
+  Phone: ${phone}
   E-Mail: ${email}
   Message: ${message}
 `);

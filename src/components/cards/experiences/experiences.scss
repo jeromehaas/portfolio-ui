@@ -1,0 +1,13 @@
+@import '@/styles/configs/variables.scss';
+
+.experiences {
+	display: flex;
+	flex-direction: column;
+	grid-column: span 8;
+	grid-row: span 2;
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+}

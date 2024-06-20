@@ -2,7 +2,7 @@
 import './paragraph.scss';
 
 // PARAGRAPH 
-const P = ({className, children}) => {
+const P = ({className = '', children = null}) => {
 	
 	// RENDER
 	return (

@@ -10,9 +10,11 @@
 	},
 	"dependencies": {
 		"@gsap/react": "^2.1.1",
+		"audiomotion-analyzer": "^4.5.0",
 		"gsap": "^3.12.5",
 		"handlebars": "^4.7.8",
 		"mapbox-gl": "^3.3.0",
+		"moment": "^2.30.1",
 		"next": "14.1.4",
 		"nodemailer": "^6.9.13",
 		"react": "^18",
@@ -21,6 +23,7 @@
 		"react-map-gl": "^7.1.7",
 		"sass": "^1.72.0",
 		"store2": "^2.14.3",
+		"swiper": "^11.1.4",
 		"zustand": "^4.5.2"
 	}
 }

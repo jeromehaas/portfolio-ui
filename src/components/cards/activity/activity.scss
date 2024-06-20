@@ -1,0 +1,18 @@
+.activity {
+	display: flex;
+	flex-direction: column;
+	grid-column: span 3;
+	grid-row: span 2;
+	position: relative;
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+	&__chart, .chart {
+		height: 100%;
+	}
+
+}
+
+

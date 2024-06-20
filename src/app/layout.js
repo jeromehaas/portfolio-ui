@@ -4,7 +4,7 @@ import '@/styles/main.scss';
 // METADATA
 const metadata = {
 	title: 'Jerome Haas',
-	description: '',
+	description: 'Curious and passionate web developer from Switzerland',
 };
 
 // ROOT-LAYOUT

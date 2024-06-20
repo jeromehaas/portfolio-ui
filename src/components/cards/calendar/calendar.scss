@@ -1,0 +1,18 @@
+.calendar {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	grid-column: span 2;
+	grid-row: span 1;
+	height: 100%;
+	justify-content: center;
+
+	&__day {
+		text-align: center;
+	}
+
+	&__month-and-year {
+		text-align: center;
+	}
+
+}

@@ -1,0 +1,9 @@
+.social-github {
+	grid-column: span 2;
+	grid-row: span 1;
+
+	&__github-connector {
+		height: 100%;
+	}
+
+}

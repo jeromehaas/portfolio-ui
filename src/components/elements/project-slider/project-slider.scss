@@ -1,0 +1,87 @@
+@import '@/styles/configs/variables.scss';
+
+.project-slider {
+
+	&__slider, .slider {
+		height: 600px;
+		margin-bottom: 24px;
+	}
+
+	&__slide, .slide {
+		border: 1px solid $grey-40;
+		border-radius: 4px;
+		display: grid;
+		grid-auto-rows: auto auto 1fr auto;
+		grid-template-columns: 1fr auto;
+		padding: 24px;
+
+		&__title {
+			margin-bottom: 4px;
+		}
+
+		&__year {
+			grid-column: span 2;
+			margin-bottom: 32px;
+		}
+
+		&__actions, .actions {
+			display: flex;
+			flex-direction: row;
+
+			&__icon {
+				cursor: pointer;
+				height: 24px;
+				margin-left: 4px;
+				margin-right: 8px;
+				width: 24px;
+			}
+
+		}
+
+		&__description {
+			grid-column: span 2;
+		}
+
+		&__devicons, .devicons {
+			display: flex;
+			flex-direction: row;
+			grid-column: span 2;
+			margin-top: auto;
+
+			&__icon {
+				height: 24px;
+				margin-right: 8px;
+				width: 24px;
+			}
+
+		}
+
+	}
+
+	&__pagination, .pagination {
+		display: flex;
+		justify-content: center;
+
+		&__bullet {
+			background-color: transparent;
+			border: 1px solid $black-100;
+			border-radius: 50%;
+			display: block;
+			height: 8px;
+			margin-right: 8px;
+			width: 8px;
+
+			&--active {
+				background-color: $black-100;
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+		}
+
+	}
+
+}
+

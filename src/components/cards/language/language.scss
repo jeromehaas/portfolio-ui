@@ -1,0 +1,9 @@
+.language {
+	grid-column: span 2;
+	grid-row: span 1;
+
+	&__language-switcher {
+		height: 100%;
+	}
+
+}

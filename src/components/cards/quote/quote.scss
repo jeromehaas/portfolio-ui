@@ -1,0 +1,45 @@
+@import '@/styles/configs/variables.scss';
+
+.quote {
+	display: flex;
+	flex-direction: column;
+	grid-column: span 4;
+	grid-row: span 1;
+	justify-content: center;
+
+	&__content {
+		margin-bottom: 8px;
+		margin-top: 24px;
+		text-align: center;
+
+		&::before,
+		&::after {
+			background: linear-gradient(to right, $green-100, $yellow-100);
+			-webkit-background-clip: text;
+			font-size: 160px;
+			position: absolute;
+			-webkit-text-fill-color: transparent;
+			z-index: -10;
+		}
+
+		&::before {
+			content: '«';
+			left: -24px;
+			line-height: 80px;
+			top: -40px;
+		}
+
+		&::after {
+			content: '»';
+			line-height: 80px;
+			right: -24px;
+			top: 64px;
+		}
+
+	}
+
+	&__author {
+		text-align: center;
+	}
+
+}

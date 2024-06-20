@@ -5,7 +5,7 @@ import './text-area.scss';
 import {useEffect, useState} from 'react';
 
 // TEXT-INPUT
-const TextArea = ({className, placeholder, id, context, register, required, pattern, error}) => {
+const TextArea = ({className = '', placeholder = '', id = '', context = null, register = null, required = false, pattern = null, error = null}) => {
 	
 	// SETUP STATE
 	const [isClient, setIsClient] = useState(false);

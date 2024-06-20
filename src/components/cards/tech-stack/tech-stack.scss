@@ -1,0 +1,16 @@
+.tech-stack {
+	grid-column: span 12;
+	grid-row: span 1;
+	place-items: center;
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+	&__devicons, .devicons {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+}

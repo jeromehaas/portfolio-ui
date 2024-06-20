@@ -1,0 +1,9 @@
+.social-phone {
+	grid-column: span 2;
+	grid-row: span 1;
+
+	&__phone-connector {
+		height: 100%;
+	}
+
+}

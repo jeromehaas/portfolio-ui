@@ -1,0 +1,27 @@
+@import '@/styles/configs/variables.scss';
+
+.insights {
+	grid-gap: 24px;
+
+	&__item, .item {
+		margin-bottom: 32px;
+
+		&__title {
+			margin-bottom: 16px;
+		}
+
+		&__line {
+			background: linear-gradient(to right, $green-100, $yellow-100); // Define your gradient colors here
+			border-radius: 4px;
+			height: 2px;
+			margin-bottom: 16px;
+			width: 100%;
+		}
+
+		&__value {
+
+		}
+
+	}
+
+}

@@ -1,0 +1,11 @@
+@import '@/styles/configs/variables.scss';
+
+.clock {
+
+	&__canvas {
+		background-color: $grey-20;
+		border-radius: 50%;
+		display: block;
+	}
+
+}

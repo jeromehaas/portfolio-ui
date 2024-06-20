@@ -1,0 +1,35 @@
+@import '@/styles/configs/variables.scss';
+
+.devicon-slider {
+
+	&__slider {
+		width: 100%;
+	}
+
+	&__slide, .slide {
+		display: grid;
+		place-items: center;
+
+		&__icon {
+			margin: 24px 0;
+		}
+
+	}
+
+	.icon-group {
+		display: flex;
+	}
+
+	@media (max-width: 1000px) {
+
+		&__slide, .slide {
+
+			&__icon {
+				margin: 12px;
+			}
+
+		}
+
+	}
+
+}

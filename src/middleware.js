@@ -2,7 +2,7 @@
 import {NextResponse} from 'next/server';
 
 // GET RESPONSE METHODS
-const {next, redirect, rewrite} = NextResponse;
+const {redirect} = NextResponse;
 
 // DEFINE LOCALES
 let locales = ['en', 'de', 'ch'];
@@ -61,7 +61,7 @@ export const config = {
 	
 	// MATCHER
 	matcher: [
-		'/((?!api|_next/static|_next/image|favicon.ico|fonts|public|graphics|images|logos|brands|references|devicons).*)',
+		'/((?!api|_next/static|_next/image|favicon.ico|fonts|public|documents|audio|graphics|images|logos|brands|icons|references|devicons).*)',
 	],
 	
 };

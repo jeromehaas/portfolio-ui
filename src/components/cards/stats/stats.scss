@@ -1,0 +1,11 @@
+@import '@/styles/configs/variables.scss';
+
+.stats {
+	grid-column: span 4;
+	grid-row: span 4;
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+}

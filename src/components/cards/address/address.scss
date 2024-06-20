@@ -1,0 +1,13 @@
+.address {
+	grid-column: span 3;
+	grid-row: span 1;
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+	&__container {
+		margin-top: 24px;
+	}
+
+}

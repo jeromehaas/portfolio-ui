@@ -1,9 +1,10 @@
 // IMPORTS
 import './brand.scss';
+import Image from 'next/image';
 import {useSearchParams} from 'next/navigation';
 
-// ICON
-const Brand = ({className, type}) => {
+// BRAND
+const Brand = ({className = '', type = ''}) => {
 	
 	// BRING IN PARAMS
 	const params = useSearchParams();
@@ -16,22 +17,22 @@ const Brand = ({className, type}) => {
 	<div className={`${className} brand`}>
 		<figure className='brand__background'/>
 		{type === 'wespi-sins' ? (
-		<img className='brand__icon' src={`/brands/${theme === 'dark' ? 'light' : 'dark'}/wespi-sins.png`} alt=''/>
+		<Image className='brand__icon' width={40} height={40} src={`/brands/${theme === 'dark' ? 'light' : 'dark'}/wespi-sins.png`} alt='Wespi Sins'/>
 		) : null}
 		{type === 'kr-consulting' ? (
-		<img className='brand__icon' src={`/brands/${theme === 'dark' ? 'light' : 'dark'}/kr-consulting.png`} alt=''/>
+		<Image className='brand__icon' width={40} height={40} src={`/brands/${theme === 'dark' ? 'light' : 'dark'}/kr-consulting.png`} alt='KR Consulting'/>
 		) : null}
 		{type === 'reiheacht' ? (
-		<img className='brand__icon' src={`/brands/${theme === 'dark' ? 'light' : 'dark'}/reiheacht.png`} alt=''/>
+		<Image className='brand__icon' width={40} height={40} src={`/brands/${theme === 'dark' ? 'light' : 'dark'}/reiheacht.png`} alt='Reiheacht'/>
 		) : null}
 		{type === 'samira-haas' ? (
-		<img className='brand__icon' src={`/brands/${theme === 'dark' ? 'light' : 'dark'}/samira-haas.png`} alt=''/>
+		<Image className='brand__icon' width={40} height={40} src={`/brands/${theme === 'dark' ? 'light' : 'dark'}/samira-haas.png`} alt='Samira Haas'/>
 		) : null}
 		{type === 'heller-grafik' ? (
-		<img className='brand__icon' src={`/brands/${theme === 'dark' ? 'light' : 'dark'}/heller-grafik.png`} alt=''/>
+		<Image className='brand__icon' width={40} height={40} src={`/brands/${theme === 'dark' ? 'light' : 'dark'}/heller-grafik.png`} alt='Heller Grafik'/>
 		) : null}
 		{type === 'praxis-am-dietschiberg' ? (
-		<img className='brand__icon' src={`/brands/${theme === 'dark' ? 'light' : 'dark'}/praxis-am-dietschiberg.png`} alt=''/>
+		<Image className='brand__icon' width={40} height={40} src={`/brands/${theme === 'dark' ? 'light' : 'dark'}/praxis-am-dietschiberg.png`} alt='Praxis am Dietschiberg'/>
 		) : null}
 	</div>
 	);

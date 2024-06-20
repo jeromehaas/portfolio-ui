@@ -3,10 +3,10 @@
 // IMPORT
 import './notification.scss';
 import {P} from '@/components/partials/paragraph/paragraph';
-import {useNotificationStore} from '@/components/stores/use-notification-store';
+import {useNotificationStore} from '@/stores/use-notification-store';
 
 // NOTIFICATION
-const Notification = ({className}) => {
+const Notification = ({className = ''}) => {
 	
 	// BRING IN NOTIFICATION-STORE
 	const {notifications} = useNotificationStore();

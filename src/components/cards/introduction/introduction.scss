@@ -1,0 +1,22 @@
+@import '@/styles/configs/variables.scss';
+
+.introduction {
+	grid-column: span 4;
+	grid-row: span 4;
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+	&__text {
+		margin-bottom: 32px;
+	}
+
+	&__signature {
+		height: 48px;
+		margin-bottom: 24px;
+		width: auto;
+	}
+
+}
+

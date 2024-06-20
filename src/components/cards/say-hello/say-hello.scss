@@ -1,0 +1,13 @@
+.say-hello {
+	grid-column: span 8;
+	grid-row: span 4;
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+	&__text {
+		margin-bottom: 32px;
+	}
+
+}

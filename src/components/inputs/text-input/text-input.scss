@@ -1,7 +1,7 @@
 @import '@/styles/configs/variables.scss';
 
 .text-input {
-	background-color: $grey-40;
+	background-color: $white-100;
 	border: 1px solid $grey-40;
 	border-radius: 4px;
 	width: 100%;
@@ -10,6 +10,7 @@
 		background-color: inherit;
 		padding: 16px;
 		width: 100%;
+		border-radius: 4px;
 
 		&::placeholder {
 			color: $grey-60;

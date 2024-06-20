@@ -1,0 +1,17 @@
+.avatar {
+	grid-column: span 3;
+	grid-row: span 2;
+
+	&__image {
+		bottom: 0;
+		display: block;
+		height: 100%;
+		left: 0;
+		object-fit: cover;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 100%;
+	}
+
+}

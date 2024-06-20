@@ -1,0 +1,11 @@
+@import '@/styles/configs/variables.scss';
+
+.featured-projects {
+	grid-column: span 9;
+	grid-row: span 3;
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+}
