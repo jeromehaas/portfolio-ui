@@ -20,4 +20,20 @@
 
 	}
 
+	@media(max-width: 1400px) {
+
+		&__input, .input {
+
+			&--50 {
+				grid-column: span 2;
+			}
+
+			&--100 {
+				grid-column: span 2;
+			}
+
+		}
+
+	}
+
 }

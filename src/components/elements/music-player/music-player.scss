@@ -14,6 +14,7 @@
 		border: 1px solid $grey-40;
 		border-radius: 4px;
 		height: 240px;
+		min-height: 240px;
 		margin-bottom: 24px;
 		overflow: hidden;
 		width: 100%;
@@ -47,6 +48,22 @@
 				height: 24px;
 			}
 
+		}
+
+	}
+
+	@media(max-width: 1100px) {
+
+		&__visualizer-wrapper {
+			height: 560px;
+		}
+
+	}
+
+	@media(max-width: 800px) {
+
+		&__visualizer-wrapper {
+			height: 240px;
 		}
 
 	}

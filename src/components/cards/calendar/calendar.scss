@@ -15,4 +15,9 @@
 		text-align: center;
 	}
 
+	@media(max-width: 1400px) {
+		grid-column: span 2;
+		grid-row: span 2;
+	}
+
 }

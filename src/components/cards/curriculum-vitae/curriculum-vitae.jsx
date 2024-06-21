@@ -12,7 +12,7 @@ const CurriculumVitae = () => {
 	return (
 	<Card className='curriculum-vitae'>
 		<H2 className='curriculum-vitae__title'>Curriculum Vitae</H2>
-		<P className='curriculum-vitae__text'>Find and download my curriculum vitae in the print version. It's not a trojan, I promise!</P>
+		<P className='curriculum-vitae__text'>Find and download my curriculum vitae in the print version. It's no malware, I promise!</P>
 		<Button className='curriculum-vitae__button' href='/documents/cv-jeromehaas.pdf' target='_blank'>Download</Button>
 	</Card>
 	);

@@ -49,7 +49,7 @@ const Page = () => {
 		<SayHello/>
 		<Stats/>
 		<SocialLinkedin/>
-		<SocialInstagram/>
+		{/* <SocialInstagram/> */}
 		<SocialGithub/>
 	</Section>
 	);

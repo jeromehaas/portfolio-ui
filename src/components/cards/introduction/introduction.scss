@@ -18,5 +18,8 @@
 		width: auto;
 	}
 
+	@media(max-width: 1100px) {
+		grid-column: span 4;
+	}
 }
 
