@@ -27,10 +27,10 @@
 	}
 
 	.text-input {
-		border: 1px solid $grey-80;
+		border: 1px solid $silver-100;
 
 		&__field {
-			background-color: $grey-100;
+			background-color: $grey-80;
 
 			&::placeholder {
 				color: $grey-40
@@ -41,10 +41,10 @@
 	}
 
 	.text-area {
-		border: 1px solid $grey-80;
+		border: 1px solid $silver-100;
 
 		&__field {
-			background-color: $grey-100;
+			background-color: $grey-80;
 
 			&::placeholder {
 				color: $grey-40
@@ -139,24 +139,63 @@
 	}
 
 	.button {
+		background-color: $white-100;
+		border: 1px solid $white-100;
+		color: $grey-100;
+	}
 
+	.project-slider {
 
-		&--dark {
-			background-color: $grey-100 !important;
-			border: 1px solid $grey-100;
-			color: $white-100 !important;
+		&__slide, .slide {
+			border: 1px solid $silver-100;
 		}
 
-		&--light {
-			background-color: $white-100;
-			border: 1px solid $white-100;
-			color: $grey-100;
+		&__pagination, .pagination {
+			display: flex;
+			justify-content: center;
+
+			&__bullet {
+				border: 1px solid $grey-40;
+
+				&--active {
+					background-color: $grey-40;
+				}
+
+			}
+
+		}
+
+	}
+
+	.music-player {
+
+		&__visualizer-wrapper {
+			border: 1px solid $silver-100;
+		}
+
+	}
+
+	.history {
+
+		&__navigation, .navigation {
+
+			&__item, .item {
+				border: 1px solid $silver-100;
+
+
+				&--active {
+					border: 1px solid $silver-80;
+				}
+
+				&__logo {
+					background-color: $grey-100;
+				}
+
+			}
+
 		}
 
 	}
 
 }
 
-.light {
-	background-color: $grey-40 !important;
-}

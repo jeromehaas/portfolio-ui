@@ -9,7 +9,7 @@ import useAudioAnalyser from '@/hooks/use-audio-analyser';
 import {useSearchParams} from 'next/navigation';
 
 // MUSIC-PLAYER
-const MusicPlayer = ({className = ''}) => {
+const MusicPlayer = ({className = '', song}) => {
 	
 	// SETUP STATE
 	const [isPlaying, setIsPlaying] = useState(false);
@@ -87,13 +87,18 @@ const MusicPlayer = ({className = ''}) => {
 		analyserNode.getByteFrequencyData(dataArray);
 		
 		// PRINT BACKGROUND
-		ctx.fillStyle = theme === 'dark' ? '#333333' : '#FFFFFF';
+		ctx.fillStyle = theme === 'dark' ? '#292a2c' : '#FFFFFF';
 		ctx.fillRect(0, 0, canvas.width, canvas.height);
+		
+		// CREATE GRADIENT
+		const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height / 1.25);
+		gradient.addColorStop(0, '#757F9A');
+		gradient.addColorStop(1, '#D7DDE8');
 		
 		// LOOP OVER FREQUENCIES
 		for (let i = 0; i < bufferLength; i++) {
 			barHeight = dataArray[i];
-			ctx.fillStyle = '#FDBB2D';
+			ctx.fillStyle = gradient;
 			ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
 			x += barWidth + 1;
 		}
@@ -112,7 +117,7 @@ const MusicPlayer = ({className = ''}) => {
 	return (
 	<div className={`${className} music-player`}>
 		<div className='music-player__visualizer-wrapper' id='music-player__visualizer-wrapper'></div>
-		<audio ref={audioRef} crossOrigin='anonymous' src='/audio/session-add.mp3' onEnded={handleReset}/>
+		<audio ref={audioRef} crossOrigin='anonymous' src='/audio/session-add.webm' onEnded={handleReset}/>
 		<div className='music-player__details details'>
 			<div className='details__controller' onClick={handleTogglePlay}>
 				{isPlaying ? <Icon className='controller__icon' type='pause'/> : <Icon className='controller__icon' type='play'/>}

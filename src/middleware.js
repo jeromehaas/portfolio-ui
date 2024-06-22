@@ -30,6 +30,7 @@ export function middleware(request) {
 		return pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`;
 	});
 	
+	// CHECK IF THEME IS AVAILABLE
 	const pathnameHasTheme = url.searchParams.get('theme');
 	
 	// IF NO LOCALE IS SET

@@ -12,13 +12,13 @@ import {useNotificationStore} from '@/stores/use-notification-store';
 import {submitContactForm} from '@/actions/submit-contact-form';
 
 // CONTACT FORM
-const ContactForm = ({className = ''}) => {
+const ContactForm = ({className = '', form = null}) => {
 	
 	// BRING IN PARAMS
 	const params = useParams();
 	
 	// BRING IN FORM
-	const form = useForm();
+	const contactForm = useForm();
 	
 	// SETUP STATE
 	const [isLoading, setIsLoading] = useState(false);
@@ -39,13 +39,13 @@ const ContactForm = ({className = ''}) => {
 		setIsLoading(true);
 		
 		// CHECK IF FORM IS VALID
-		const formIsValid = await form.trigger();
+		const formIsValid = await contactForm.trigger();
 		
 		// IF FORM IS VALID
 		if (formIsValid) {
 			
 			// GET VALUES
-			const values = form.getValues();
+			const values = contactForm.getValues();
 			
 			// VALIDATE FORM
 			await submitContactForm({
@@ -59,10 +59,10 @@ const ContactForm = ({className = ''}) => {
 			});
 			
 			// ADD NOTIFICATION
-			await addNotification({message: dictionary?.[lang]?.['success-message']});
+			await addNotification({message: form?.notification?.success});
 			
 			// RESET FORM
-			await form.reset({
+			await contactForm.reset({
 				'contact-form': null,
 			});
 			
@@ -79,12 +79,13 @@ const ContactForm = ({className = ''}) => {
 	// RENDER
 	return (
 	<div className={`${className} contact-form`}>
-		<TextInput className='contact-form__input input--50' id='firstname' context='contact-form' register={form.register} placeholder={'Firstname'} required={true} pattern={/^[A-Za-zÀ-ÖØ-öø-ÿ'`-\s]+$/} error={form.formState.errors}/>
-		<TextInput className='contact-form__input input--50' id='lastname' context='contact-form' register={form.register} placeholder={'Lastname'} required={true} pattern={/^[A-Za-zÀ-ÖØ-öø-ÿ'`-\s]+$/} error={form.formState.errors}/>
-		<TextInput className='contact-form__input input--100' id='email' context='contact-form' register={form.register} placeholder={'E-Mail'} required={true} pattern={/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/} error={form.formState.errors}/>
-		<TextInput className='contact-form__input input--100' id='phone' context='contact-form' register={form.register} placeholder={'Phone'} required={true} pattern={/^(?:\+41|0)?[ -]?\d{2}[ -]?\d{3}[ -]?\d{2}[ -]?\d{2}$/} error={form.formState.errors}/>
-		<TextArea className='contact-form__input input--100' id='message' context='contact-form' register={form.register} placeholder={'Message'} required={true} pattern={/^[\s\S]{1,5000}$/} error={form.formState.errors}/>
-		<Button className='contact-form__input input--100 button--dark' href='/' onClick={(event) => handleSubmit(event)} disabled={isLoading}>{'Send message'}</Button>
+		{form?.inputs.filter((input) => input?.type === 'text').map((input) => (
+		<TextInput className={`contact-form__input ${input?.width === 'small' ? 'input--50' : 'input--100'}`} id={input?.field} context='contact-form' register={contactForm.register} placeholder={input?.placeholder} required={input?.required} pattern={input?.pattern} error={contactForm.formState.errors} key={input?.id}/>
+		))}
+		{form?.inputs.filter((input) => input.type === 'textarea').map((input) => (
+		<TextArea className={`contact-form__input ${input?.width === 'small' ? 'input--50' : 'input--100'}`} id={input?.field} context='contact-form' register={contactForm.register} placeholder={input?.placeholder} required={input?.required} pattern={input?.pattern} error={contactForm.formState.errors} key={input?.id}/>
+		))}
+		{form?.button && <Button className='contact-form__input input--100 button--dark' href={form?.button?.href} onClick={(event) => handleSubmit(event)} disabled={isLoading}>{form?.button?.label}</Button>}
 	</div>
 	);
 	

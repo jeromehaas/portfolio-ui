@@ -1,16 +1,17 @@
 @import './variables.scss';
 
 body {
-	background-color: #ECECEC;
+	background-color: #D7DDE8;
 	height: 100%;
 	overflow: hidden;
 }
 
 *::selection {
-	background: transparentize($yellow-100, 0.85);
+	background: transparentize($silver-80, 0.85);
 	opacity: 0.1;
-	text-decoration: 4px underline $yellow-100;
-	text-underline: 2px solid $yellow-100
+	text-decoration: 0px underline $silver-100;
+	text-underline: 0px solid $yellow-100;
+	text-decoration: none;
 }
 
 h1, h2, h3, h4, p, li, a, button, td {

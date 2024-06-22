@@ -1,2 +1,41 @@
+@import '@/styles/configs/variables.scss';
+
 .kroki {
+	border-radius: 4px;
+	height: 100%;
+	overflow: hidden;
+	width: 100%;
+
+	&__marker, .marker {
+
+		&__wrapper {
+			display: block;
+			height: 40px;
+			position: relative;
+			width: 40px;
+		}
+
+		&__dot {
+			background-color: $grey-100;
+			border: 2px solid $white-100;
+			border-radius: 50%;
+			height: 16px;
+			position: absolute;
+			transform: translate(-50%, -50%);
+			width: 16px;
+			z-index: 10;
+		}
+
+		&__background {
+			animation: pulse 4s ease-out infinite;
+			background-color: $silver-100;
+			border-radius: 50%;
+			height: 40px;
+			position: absolute;
+			transform: translate(-50%, -50%);
+			width: 40px;
+		}
+
+	}
+
 }

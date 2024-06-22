@@ -2,86 +2,30 @@
 
 // IMPORTS
 import './activity-chart.scss';
-import {useEffect, useRef} from 'react';
+import {useEffect, useRef, useState} from 'react';
+import {P} from '@/components/partials/paragraph/paragraph';
 
 // ACTIVITY-CHART
-const ActivityChart = ({className = ''}) => {
+const ActivityChart = ({className = '', events}) => {
 	
 	// SETUP REF
 	const canvasRef = useRef(null);
 	
-	// DEFINE DATA
-	const data = [
-		0, 1, 4, 1, 4, 2, 2, 0, 4, 1, 0, 2, 2, 4, 4, 3, 1, 2, 2, 0, 4, 1, 3, 4, 4, 0,
-		3, 2, 4, 0, 1, 4, 0, 2, 4, 2, 1, 0, 0, 2, 3, 1, 4, 0, 4, 2, 4, 3, 3, 1, 3, 3,
-		3, 2, 0, 3, 0, 3, 4, 1, 0, 0, 4, 2, 4, 1, 1, 1, 1, 4, 0, 0, 1, 4, 1, 2, 2, 0,
-		1, 3, 2, 1, 0, 0, 0, 2, 0, 2, 1, 0, 0, 1, 0, 2, 2, 3, 2, 0, 2, 0, 1, 3, 2, 0,
-		0, 0, 3, 0, 1, 2, 1, 1, 0, 3, 2, 3, 3, 0, 0, 4, 3, 0, 0, 2, 4, 0, 1, 3, 4, 4,
-		1, 3, 2, 0, 4, 2, 2, 2, 3, 2, 1, 2, 4, 0, 2, 3, 4, 0, 0, 3, 0, 0, 0, 0, 0, 4,
-		2, 0, 4, 2, 0, 0, 0, 1, 3, 4, 1, 4, 0, 2, 1, 4, 2, 1, 0, 1, 2, 1, 3, 2, 1, 4,
-		3, 0, 4, 2, 2, 4, 3, 1, 1, 0, 1, 3, 4, 4, 3, 3, 0, 0, 1, 0, 2, 3, 1, 0, 0, 0,
-		3, 3, 2, 3, 0, 0, 0, 1, 2, 3, 1, 2, 2, 2, 0, 0, 0, 2, 0, 1, 2, 1, 1, 0, 3, 4,
-		0, 0, 3, 0, 1, 2, 1, 1, 0, 3, 2, 3, 3, 0, 0, 4, 3, 0, 0, 2, 4, 0, 1, 3, 4, 4,
-		1, 3, 2, 0, 4, 2, 2, 2, 3, 2, 1, 2, 4, 0, 2, 3, 4, 0, 0, 3, 0, 0, 0, 0, 0, 4,
-		3, 2, 0, 3, 0, 3, 4, 1, 0, 0, 4, 2, 4, 1, 1, 1, 1, 4, 0, 0, 1, 4, 1, 2, 2, 0,
-	];
+	// SETUP STATE
+	const [viewportWidth, setViewportWidth] = useState();
 	
-	// GET RANDOM COLOR
-	const getRandomColor = (index) => {
+
+	
+	// HANDLE RESIZE
+	const handleResize = () => {
 		
-		// DEFINE PLACEHOLDER
-		let randomColor;
-		
-		// DEFINE COLORS
-		const colors = ['22C1C3', 'FDBB2D']; // green and yellow colors in hex without '#'
-		
-		// GET DYNAMIC COLOR
-		if (index % 4 === 0) randomColor = colors[0];
-		if (index % 4 !== 0) randomColor = colors[1];
-		
-		// RETURN
-		return randomColor;
+		// UPDATE STATE
+		setViewportWidth(window.innerWidth);
 		
 	};
 	
-	// GENERATE COLOR
-	const generateColor = (index) => {
-		
-		// DEFINE PLACEHOLDER
-		let color;
-		
-		// GET BASE-COLOR AND OPACITY
-		const baseColor = getRandomColor(index);
-		const opacity = getOpacity(data[index]);
-		
-		// FORMAT HEX
-		color = `#${baseColor}${opacity}`;
-		
-		// RETURN
-		return color;
-		
-	};
-	
-	// GET OPACITY
-	const getOpacity = (value) => {
-		
-		// DEFINE PLACEHOLDER
-		let opacity;
-		
-		// GET OPACITY
-		if (value === 4) opacity = 'FF';
-		if (value === 3) opacity = 'BF';
-		if (value === 2) opacity = '80';
-		if (value === 1) opacity = '40';
-		if (value === 0) opacity = '00';
-		
-		// RETURN
-		return opacity;
-		
-	};
-	
-	// ON FIRST RENDER
-	useEffect(() => {
+	// DRAW CHART
+	const drawChart = () => {
 		
 		// GET CONTEXT
 		const canvas = canvasRef.current;
@@ -102,16 +46,86 @@ const ActivityChart = ({className = ''}) => {
 		// DRAW SQUARES
 		for (let i = 0; i < rows; i++) {
 			for (let j = 0; j < columns; j++) {
-				context.fillStyle = generateColor(i * columns + j);
+				context.fillStyle = generateColor(events, i * columns + j);
 				context.fillRect(j * (squareSize + padding), i * (squareSize + padding), squareSize, squareSize);
 			}
 		}
 		
-	}, []);
+	};
+	
+	// GET RANDOM COLOR
+	const getRandomColor = (value, index) => {
+		
+		// DEFINE PLACEHOLDER
+		let randomColor;
+		
+		// DEFINE COLORS
+		const colors = ['757F9A', 'D7DDE8'];
+		
+		// GET DYNAMIC COLOR
+		if (index % 4 === 0) randomColor = colors[0];
+		if (index % 4 !== 0) randomColor = colors[1];
+		
+		// RETURN
+		return randomColor;
+		
+	};
+	
+	// GENERATE COLOR
+	const generateColor = (events, index) => {
+		
+		// DEFINE PLACEHOLDER
+		let color;
+		
+		// GET BASE-COLOR AND OPACITY
+		const baseColor = getRandomColor(events[index], index);
+		const opacity = getOpacity(events[index]);
+		
+		// FORMAT HEX
+		color = `#${baseColor}${opacity}`;
+		
+		// RETURN
+		return color;
+		
+	};
+	
+	// GET OPACITY
+	const getOpacity = (value) => {
+		
+		// DEFINE PLACEHOLDER
+		let opacity;
+		
+		// GET OPACITY
+		if (value === 4) opacity = 'FF';
+		if (value === 3) opacity = 'BF';
+		if (value === 2) opacity = '80';
+		if (value === 1) opacity = '40';
+		if (value === 0) opacity = '10';
+		
+		// RETURN
+		return opacity;
+		
+	};
+	
+	// ON FIRST RENDER
+	useEffect(() => {
+		
+		// DRAW CHART
+		drawChart();
+		
+		// SETUP EVENT-LISTENER FOR WINDOW-RESIZE
+		window.addEventListener('resize', handleResize);
+		
+		// REMOVE EVENT-LISTENER
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+		
+	}, [viewportWidth]);
 	
 	// RENDER
 	return (
-	<div className={`${className} activity-chart`} onResize={() => console.log('resize')}>
+	<div className={`${className} activity-chart`}>
 		<canvas className='activity-chart__graph' ref={canvasRef}/>
 	</div>
 	);

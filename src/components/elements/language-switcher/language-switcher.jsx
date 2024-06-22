@@ -20,8 +20,7 @@ const LanguageSwitcher = ({className = ''}) => {
 		
 		// REDIRECT TO NEW LOCALE
 		if (lang === 'en') changeLanguage({language: 'de'});
-		if (lang === 'de') changeLanguage({language: 'ch'});
-		if (lang === 'ch') changeLanguage({language: 'en'});
+		if (lang === 'de') changeLanguage({language: 'en'});
 		
 	};
 	

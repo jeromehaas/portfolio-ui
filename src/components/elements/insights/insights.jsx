@@ -15,7 +15,7 @@ const Insights = ({className = '', insights = []}) => {
 		<div className='insights__item item' key={index}>
 			<H3 className='item__title'>{item.title}</H3>
 			<figure className='item__line'/>
-			<P className='item__title paragraph--big paragraph--bold'>{item.value}</P>
+			<P className='item__value paragraph--big paragraph--bold'>{item.value}</P>
 		</div>
 		))}
 	</div>

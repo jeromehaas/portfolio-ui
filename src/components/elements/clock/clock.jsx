@@ -79,9 +79,9 @@ const Clock = ({className = ''}) => {
 		second = (second * Math.PI) / 30;
 		
 		// DRAW TIME
-		drawHand(ctx, hour, radius * 0.5, radius * 0.07, '#1A1A1A');
-		drawHand(ctx, minute, radius * 0.8, radius * 0.07, '#1A1A1A');
-		drawHand(ctx, second, radius * 0.9, radius * 0.02, '#FDBB2D');
+		drawHand(ctx, hour, radius * 0.5, radius * 0.07, '#292a2c');
+		drawHand(ctx, minute, radius * 0.8, radius * 0.07, '#292a2c');
+		drawHand(ctx, second, radius * 0.9, radius * 0.02, '#DD0F0F');
 		
 	};
 	

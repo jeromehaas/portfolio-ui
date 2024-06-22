@@ -6,7 +6,7 @@ import {useSearchParams} from 'next/navigation';
 import {Map, Marker} from 'react-map-gl';
 
 // KROKI
-const Kroki = ({className = ''}) => {
+const Kroki = ({className = '', coordinates = null}) => {
 	
 	// BRING IN SEARCH-PARAMS
 	const searchParams = useSearchParams();
@@ -26,8 +26,8 @@ const Kroki = ({className = ''}) => {
 	// RENDER
 	return (
 	<div className={`${className} kroki`}>
-		<Map className='kroki__background' mapboxAccessToken={mapboxToken} initialViewState={{latitude: 47.165410, longitude: 8.397860, zoom: 14}} mapStyle={theme === 'dark' ? mapboxStyles['dark'] : mapboxStyles['light']} maxZoom={20} minZoom={12}>
-			<Marker className='kroki__marker marker' latitude={47.165410} longitude={8.397860}>
+		<Map className='kroki__background' mapboxAccessToken={mapboxToken} initialViewState={{latitude: coordinates?.latitude, longitude: coordinates.longitude, zoom: 14}} mapStyle={theme === 'dark' ? mapboxStyles['dark'] : mapboxStyles['light']} maxZoom={20} minZoom={12}>
+			<Marker className='kroki__marker marker' latitude={coordinates?.latitude} longitude={coordinates?.longitude}>
 					<span className='marker__wrapper'>
 						<figure className='marker__dot'/>
 						<figure className='marker__background'/>

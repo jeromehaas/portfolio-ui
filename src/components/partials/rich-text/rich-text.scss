@@ -1,0 +1,12 @@
+.rich-text {
+
+	&__paragraph, .paragraph {
+		display: inline !important;
+
+		&__highlight {
+			display: inline !important;
+		}
+
+	}
+
+}

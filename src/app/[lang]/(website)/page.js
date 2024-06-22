@@ -15,7 +15,7 @@ import Experiences from '@/components/cards/experiences/experiences';
 import TechStack from '@/components/cards/tech-stack/tech-stack';
 import SocialPhone from '@/components/cards/social-phone/social-phone';
 import SocialEmail from '@/components/cards/social-email/social-email';
-import Stats from '@/components/cards/stats/stats';
+import Statistics from '@/components/cards/statistics/statistics';
 import FeaturedProjects from '@/components/cards/featured-projects/featured-projects';
 import SocialLinkedin from '@/components/cards/social-linkedin/social-linkedin';
 import SocialInstagram from '@/components/cards/social-instagram/social-instagram';
@@ -47,9 +47,8 @@ const Page = () => {
 		<OnRepeat/>
 		<Experiences/>
 		<SayHello/>
-		<Stats/>
+		<Statistics/>
 		<SocialLinkedin/>
-		{/* <SocialInstagram/> */}
 		<SocialGithub/>
 	</Section>
 	);
