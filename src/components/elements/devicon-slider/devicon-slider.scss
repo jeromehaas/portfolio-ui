@@ -12,6 +12,8 @@
 
 		&__icon {
 			margin: 24px 0;
+			width: 48px;
+			height: auto;
 		}
 
 	}
@@ -26,6 +28,18 @@
 
 			&__icon {
 				margin: 12px;
+			}
+
+		}
+
+	}
+
+	@media (max-width: 800px) {
+
+		&__slide, .slide {
+
+			&__icon {
+				width: 32px;
 			}
 
 		}

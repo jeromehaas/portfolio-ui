@@ -18,6 +18,12 @@
 
 		&__title {
 			margin-bottom: 4px;
+			margin-right: 24px;
+		}
+
+		&__metadata {
+			grid-column: span 2;
+			margin-bottom: 16px;
 		}
 
 		&__year {

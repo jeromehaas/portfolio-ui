@@ -117,12 +117,12 @@ const MusicPlayer = ({className = '', song}) => {
 	return (
 	<div className={`${className} music-player`}>
 		<div className='music-player__visualizer-wrapper' id='music-player__visualizer-wrapper'></div>
-		<audio ref={audioRef} crossOrigin='anonymous' src='/audio/session-add.webm' onEnded={handleReset}/>
+		<audio ref={audioRef} crossOrigin='anonymous' src='/audio/easy-hike.mp3' onEnded={handleReset}/>
 		<div className='music-player__details details'>
 			<div className='details__controller' onClick={handleTogglePlay}>
 				{isPlaying ? <Icon className='controller__icon' type='pause'/> : <Icon className='controller__icon' type='play'/>}
 			</div>
-			<P className='details__title'>Skee Mask | Session Add</P>
+			<P className='details__title'>Easy Hike | Yari</P>
 		</div>
 	</div>
 	);

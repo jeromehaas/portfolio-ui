@@ -3,7 +3,6 @@
 // IMPORTS
 import './devicon-slider.scss';
 import Image from 'next/image';
-import {Devicon} from '@/components/partials/devicon/devicon';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {Autoplay, Pagination} from 'swiper/modules';
 import {useEffect, useState} from 'react';
@@ -17,8 +16,8 @@ const DeviconSlider = ({className = '', devicons = [], theme = 'white'}) => {
 	// DEFINE BEAKPOINT-SETTINGS
 	const breakpointSettings = {
 		0: {slidesPerView: 3},
-		400: {slidesPerView: 4},
-		800: {slidesPerView: 6},
+		400: {slidesPerView: 5},
+		800: {slidesPerView: 8},
 		1200: {slidesPerView: 9},
 	};
 	

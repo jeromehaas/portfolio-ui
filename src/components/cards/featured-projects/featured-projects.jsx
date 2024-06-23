@@ -3,106 +3,23 @@ import './featured-projects.scss';
 import Card from '@/components/layouts/card/card';
 import ProjectSlider from '@/components/elements/project-slider/project-slider';
 import {H2} from '@/components/partials/heading/heading';
+import {getLanguage} from '@/actions/lang';
 
 // FEATURED PROJECTS
-const FeaturedProjects = () => {
+const FeaturedProjects = async () => {
 	
-	const data = [
-		{
-			id: 'heller-grafik-web',
-			title: 'Heller Grafik | Website',
-			year: '2023',
-			description: 'Lorem ipsum dolor sit amet',
-			links: {
-				github: 'https://github.com',
-				url: 'https://github.com',
-			},
-			techStack: ['nextjs', 'javascript', 'scss'],
-		},
-		{
-			id: 'samira-haas-web',
-			title: 'Samira Haas | Website',
-			year: '2023',
-			description: 'Lorem ipsum dolor sit amet',
-			links: {
-				github: 'https://github.com',
-				url: 'https://github.com',
-			},
-			techStack: ['nextjs', 'javascript', 'scss'],
-		},
-		{
-			id: 'praxis-dietschiberg-web',
-			title: 'Praxis Dietschiberg | Website',
-			year: '2023',
-			description: 'Lorem ipsum dolor sit amet',
-			links: {
-				github: 'https://github.com',
-				url: 'https://github.com',
-			},
-			techStack: ['nextjs', 'javascript', 'scss'],
-		},
-		{
-			id: 'kr-consulting-web',
-			title: 'KR Consulting Website | Website',
-			year: '2023',
-			description: 'Lorem ipsum dolor sit amet',
-			links: {
-				github: 'https://github.com',
-				url: 'https://github.com',
-			},
-			techStack: ['nextjs', 'javascript', 'sass'],
-		},
-		{
-			id: 'heller-grafik-web',
-			title: 'Heller Grafik | Website',
-			year: '2023',
-			description: 'Lorem ipsum dolor sit amet',
-			links: {
-				github: 'https://github.com',
-				url: 'https://github.com',
-			},
-			techStack: ['nextjs', 'javascript', 'scss'],
-		},
-		{
-			id: 'samira-haas-web',
-			title: 'Samira Haas | Website',
-			year: '2023',
-			description: 'Lorem ipsum dolor sit amet',
-			links: {
-				github: 'https://github.com',
-				url: 'https://github.com',
-			},
-			techStack: ['nextjs', 'javascript', 'scss'],
-		},
-		{
-			id: 'praxis-dietschiberg-web',
-			title: 'Praxis Dietschiberg | Website',
-			year: '2023',
-			description: 'Lorem ipsum dolor sit amet',
-			links: {
-				github: 'https://github.com',
-				url: 'https://github.com',
-			},
-			techStack: ['nextjs', 'javascript', 'scss'],
-		},
-		{
-			id: 'kr-consulting-web',
-			title: 'KR Consulting Website | Website',
-			year: '2023',
-			description: 'Lorem ipsum dolor sit amet',
-			links: {
-				github: 'https://github.com',
-				url: 'https://github.com',
-			},
-			techStack: ['nextjs', 'javascript', 'sass'],
-		},
-	];
+	// GET LANGUAGE
+	const language = await getLanguage();
+	
+	// GET DATA
+	const response = await fetch(`http://localhost:1337/api/featured-project?locale=${language}&populate[projects][populate][devicons][populate]=*&populate[projects][populate][links][populate]=*`);
+	const {data} = await response.json();
 	
 	// RENDER
 	return (
 	<Card className='featured-projects'>
-		<H2 className='featured-projects__title'>Featured Projects</H2>
-		<ProjectSlider className='featured-projects__project-slider' projects={data}/>
+		<H2 className='featured-projects__title'>{ data?.attributes?.title }</H2>
+		<ProjectSlider className='featured-projects__project-slider' projects={data?.attributes?.projects}/>
 	</Card>
 	);
 	

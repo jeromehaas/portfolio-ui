@@ -10,7 +10,7 @@ const getTheme = async() => {
 	const cookieStore = cookies();
 	
 	// GET THEME
-	const theme = cookieStore.get('theme')?.value || 'light';
+	const theme = cookieStore.get('theme')?.value || 'dark';
 	
 	// RETURN 
 	return theme;

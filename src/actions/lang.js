@@ -21,33 +21,11 @@ const changeLanguage = async ({language}) => {
 // GET LANGUAGE
 const getLanguage = async () => {
 	
-	// DEFINE PLACEHOLDER
-	let language;
-	
 	// GET COOKIE-STORE
 	const cookieStore = cookies();
 	
 	// CHECK IF LANGUAGE IS AVAILABLE
-	const hasLanguage = cookieStore.get('lang')?.value;
-	
-	// IF LANGUAGE IS NOT AVAILABLE
-	if (!hasLanguage) {
-		
-		// SET COOKIE
-		cookieStore.set('lang', 'en');
-		
-		// SET LANGUAGE
-		language = 'en';
-		
-	}
-	
-	// IF LANGUAGE IS AVAILABLE
-	else {
-		
-		// SAVE IN COOKIE
-		language = cookieStore.get('lang')?.value;
-		
-	}
+	const language = cookieStore.get('lang')?.value || 'en';
 	
 	// RETURN
 	return language;

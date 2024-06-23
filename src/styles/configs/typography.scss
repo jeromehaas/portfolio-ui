@@ -17,13 +17,13 @@ input, textarea {
 
 	&--h1 {
 		font-size: 48px;
-		font-weight: 600;
+		font-weight: 500;
 		line-height: 1.1;
 	}
 
 	&--h2 {
-		font-size: 24px;
-		font-weight: 600;
+		font-size: 28px;
+		font-weight: 500;
 		line-height: 1.1;
 		text-transform: uppercase;
 	}
@@ -54,7 +54,7 @@ input, textarea {
 	}
 
 	&--big {
-		font-size: 28px;
+		font-size: 24px;
 	}
 
 	&--huge {
@@ -63,7 +63,7 @@ input, textarea {
 	}
 
 	&--bold {
-		font-weight: 600;
+		font-weight: 500;
 	}
 
 }

@@ -2,12 +2,13 @@
 
 // IMPORTS
 import './project-slider.scss';
+import Image from 'next/image';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {P} from '@/components/partials/paragraph/paragraph';
 import {Autoplay, Grid, Pagination} from 'swiper/modules';
-import {Devicon} from '@/components/partials/devicon/devicon';
+import {Fragment, useEffect, useState} from 'react';
 import {Icon} from '@/components/partials/icon/icon';
-import {useEffect, useState} from 'react';
+import {RichText} from '@/components/partials/rich-text/rich-text';
 
 // PROJECT SLIDER
 const ProjectSlider = ({className = '', projects = []}) => {
@@ -56,26 +57,32 @@ const ProjectSlider = ({className = '', projects = []}) => {
 			{projects.map((project, index) => (
 			<SwiperSlide className='project-slider__slide slide' key={index}>
 				<P className='slide__title'>{project.title}</P>
-				{project.links?.github || project.links?.url ? (
 				<div className='slide__actions actions'>
-					{project.links?.github ? <Icon className='actions__icon' type='github' onClick={() => handleOpenLink({link: project.links.github})}/> : null}
-					{project.links?.github ? <Icon className='actions__icon' type='external-link' onClick={() => handleOpenLink({link: project.links.url})}/> : null}
-				</div>) : null}
-				<P className='slide__year paragraph--small'>{project.year}</P>
-				<P className='slide__description paragraph--small'>{project.description}</P>
-				{project.techStack.length ? (
+					{project.links.length ? project.links.map((link) => (
+					<Fragment>
+						{link.type === 'github' ? <Icon className='actions__icon' type='github' onClick={() => handleOpenLink({link: link.url})}/> : null}
+						{link.type === 'website' ? <Icon className='actions__icon' type='external-link' onClick={() => handleOpenLink({link: link.url})}/> : null}
+					</Fragment>
+					)) : null}
+				</div>
+				<P className='slide__metadata paragraph--small'>{project.type} | {project.year}</P>
+				<RichText className='slide__description paragraph--small'>{project?.description}</RichText>
+				{project.devicons?.length ? (
 				<div className='slide__devicons devicons'>
-					{project.techStack.map((item, index) => (
-					<Devicon className='devicons__icon' type={item} key={index}/>
+					{project.devicons.map((devicon) => (
+					<Image class='devicons__icon' src={devicon?.white?.data?.attributes?.url} width={40} height={40} alt='Devicon' key={devicon.id}></Image>
 					))}
 				</div>) : null}
 			</SwiperSlide>
 			))}
 		</Swiper>
 		) : null}
+		
 		<div className='project-slider__pagination pagination'></div>
+		;
 	</div>
-	);
+	)
+	;
 	
 };
 

@@ -185,10 +185,16 @@
 
 				&--active {
 					border: 1px solid $silver-80;
+
+					.logo {
+						border-right: 1px solid $silver-80;
+					}
+
 				}
 
 				&__logo {
 					background-color: $grey-100;
+					border-right: 1px solid $silver-100;
 				}
 
 			}

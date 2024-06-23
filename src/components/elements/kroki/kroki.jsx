@@ -19,14 +19,14 @@ const Kroki = ({className = '', coordinates = null}) => {
 	
 	// MAPBOX-STYLES
 	const mapboxStyles = {
-		light: 'mapbox://styles/mapbox/light-v11',
-		dark: 'mapbox://styles/mapbox/dark-v11',
+		dark: 'mapbox://styles/jeromehaas/clxrqxnho005b01pa0kcphg9m',
+		light: 'mapbox://styles/jeromehaas/clxrrqmcl00pf01qm34bzbwqh',
 	};
 	
 	// RENDER
 	return (
 	<div className={`${className} kroki`}>
-		<Map className='kroki__background' mapboxAccessToken={mapboxToken} initialViewState={{latitude: coordinates?.latitude, longitude: coordinates.longitude, zoom: 14}} mapStyle={theme === 'dark' ? mapboxStyles['dark'] : mapboxStyles['light']} maxZoom={20} minZoom={12}>
+		<Map className='kroki__background' mapboxAccessToken={mapboxToken} initialViewState={{latitude: coordinates?.latitude, longitude: coordinates.longitude, zoom: 12}} mapStyle={theme === 'dark' ? mapboxStyles['dark'] : mapboxStyles['light']} maxZoom={20} minZoom={7}>
 			<Marker className='kroki__marker marker' latitude={coordinates?.latitude} longitude={coordinates?.longitude}>
 					<span className='marker__wrapper'>
 						<figure className='marker__dot'/>

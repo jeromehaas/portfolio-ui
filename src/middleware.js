@@ -22,17 +22,12 @@ export function middleware(request) {
 	// GET LANGUAGE
 	const language = cookies.get('lang')?.value || 'en';
 	
-	// GET THEME
-	const theme = cookies.get('theme')?.value || 'light';
-	
 	// CHECK IF LOCALE IS AVAILABLE
 	const pathnameHasLocale = locales.some((locale) => {
 		return pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`;
 	});
 	
-	// CHECK IF THEME IS AVAILABLE
-	const pathnameHasTheme = url.searchParams.get('theme');
-	
+
 	// IF NO LOCALE IS SET
 	if (!pathnameHasLocale) {
 		
@@ -43,6 +38,12 @@ export function middleware(request) {
 		return redirect(path);
 		
 	}
+	
+	// GET THEME
+	const theme = cookies.get('theme')?.value || 'dark';
+	
+	// CHECK IF THEME IS AVAILABLE
+	const pathnameHasTheme = url.searchParams.get('theme');
 	
 	// IF NO LOCALE IS SET
 	if (!pathnameHasTheme) {
