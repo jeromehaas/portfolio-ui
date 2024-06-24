@@ -19,7 +19,7 @@ const ThemeToggle = ({className = ''}) => {
 		await setTheme();
 		
 		// UPDATE ROUTE
-		router.push('/');
+		router.push('/', { scroll: false });
 		
 	};
 	
