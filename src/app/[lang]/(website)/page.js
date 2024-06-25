@@ -18,10 +18,10 @@ import SocialEmail from '@/components/cards/social-email/social-email';
 import Statistics from '@/components/cards/statistics/statistics';
 import FeaturedProjects from '@/components/cards/featured-projects/featured-projects';
 import SocialLinkedin from '@/components/cards/social-linkedin/social-linkedin';
-import SocialInstagram from '@/components/cards/social-instagram/social-instagram';
 import SocialGithub from '@/components/cards/social-github/social-github';
 import OnRepeat from '@/components/cards/on-repeat/on-repeat';
 import CurriculumVitae from '@/components/cards/curriculum-vitae/curriculum-vitae';
+import Plausible from '@/components/elements/plausible/plausible';
 
 // PAGE
 const Page = () => {
@@ -50,6 +50,7 @@ const Page = () => {
 		<Statistics/>
 		<SocialLinkedin/>
 		<SocialGithub/>
+		<Plausible />
 	</Section>
 	);
 	

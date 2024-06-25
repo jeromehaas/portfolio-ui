@@ -58,8 +58,8 @@ const ProjectSlider = ({className = '', projects = []}) => {
 			<SwiperSlide className='project-slider__slide slide' key={index}>
 				<P className='slide__title'>{project.title}</P>
 				<div className='slide__actions actions'>
-					{project.links.length ? project.links.map((link) => (
-					<Fragment>
+					{project.links.length ? project.links.map((link, index) => (
+					<Fragment key={link.id}>
 						{link.type === 'github' ? <Icon className='actions__icon' type='github' onClick={() => handleOpenLink({link: link.url})}/> : null}
 						{link.type === 'website' ? <Icon className='actions__icon' type='external-link' onClick={() => handleOpenLink({link: link.url})}/> : null}
 					</Fragment>
@@ -70,7 +70,7 @@ const ProjectSlider = ({className = '', projects = []}) => {
 				{project.devicons?.length ? (
 				<div className='slide__devicons devicons'>
 					{project.devicons.map((devicon) => (
-					<Image class='devicons__icon' src={devicon?.white?.data?.attributes?.url} width={40} height={40} alt='Devicon' key={devicon.id}></Image>
+					<Image className='devicons__icon' src={devicon?.white?.data?.attributes?.url} width={40} height={40} alt='Devicon' key={devicon.id}/>
 					))}
 				</div>) : null}
 			</SwiperSlide>
