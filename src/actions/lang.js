@@ -13,8 +13,11 @@ const changeLanguage = async ({language}) => {
 	// SAVE IN COOKIE
 	cookieStore.set('lang', language);
 	
+	// GET THEME
+	const theme = cookieStore.get('theme')?.value || 'dark';
+	
 	// REDIRECT
-	redirect(`/${language}`);
+	redirect(`/${language}?theme=${theme}`);
 	
 };
 
