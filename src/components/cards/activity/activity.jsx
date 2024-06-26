@@ -3,17 +3,13 @@ import './activity.scss';
 import Card from '@/components/layouts/card/card';
 import {H2} from '@/components/partials/heading/heading';
 import ActivityChart from '@/components/elements/activity-chart/activity-chart';
-import {getLanguage} from '@/actions/lang';
+import {getActivityData} from '@/services/get-activity-data';
 
 // ACTIVITY
 const Activity = async () => {
 	
-	// GET LANGUAGE
-	const language = await getLanguage();
-	
 	// GET DATA
-	const response = await fetch(`http://localhost:1337/api/activity?locale=${language}`);
-	const {data} = await response.json();
+	const {data } = await getActivityData();
 	
 	// RENDER
 	return (

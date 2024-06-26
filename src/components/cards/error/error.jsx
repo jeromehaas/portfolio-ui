@@ -3,18 +3,14 @@ import './error.scss';
 import Card from '@/components/layouts/card/card';
 import {H1, H3} from '@/components/partials/heading/heading';
 import {P} from '@/components/partials/paragraph/paragraph';
-import {getLanguage} from '@/actions/lang';
 import {Button} from '@/components/partials/button/button';
+import {getErrorData} from '@/services/get-error-data';
 
 // ERROR
 const Error = async () => {
 	
-	// GET LANGUAGE
-	const language = await getLanguage();
-	
 	// GET DATA
-	const response = await fetch(`http://localhost:1337/api/error?locale=${language}&populate=*`);
-	const {data} = await response.json();
+	const {data} = await getErrorData();
 	
 	// RENDER
 	return (

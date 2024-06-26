@@ -3,8 +3,8 @@ import './tech-stack.scss';
 import Card from '@/components/layouts/card/card';
 import DeviconSlider from '@/components/elements/devicon-slider/devicon-slider';
 import {H2} from '@/components/partials/heading/heading';
-import {getLanguage} from '@/actions/lang';
 import {getTheme} from '@/actions/theme';
+import {getTechStackData} from '@/services/get-tech-stack-data';
 
 // EXPERIENCES PREVIEW
 const TechStack = async () => {
@@ -12,12 +12,8 @@ const TechStack = async () => {
 	// GET THEME
 	const theme = await getTheme();
 	
-	// GET LANGUAGE
-	const language = await getLanguage();
-	
 	// GET DATA
-	const response = await fetch(`http://localhost:1337/api/tech-stack?locale=${language}&populate[devicons][populate]=*`);
-	const {data} = await response.json();
+	const {data} = await getTechStackData();
 	
 	// RENDER
 	return (

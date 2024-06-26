@@ -4,7 +4,7 @@ import Card from '@/components/layouts/card/card';
 import MusicPlayer from '@/components/elements/music-player/music-player';
 import {H2} from '@/components/partials/heading/heading';
 import {getTheme} from '@/actions/theme';
-import {getLanguage} from '@/actions/lang';
+import {getOnRepeatData} from '@/services/get-on-repeat-data';
 
 // ON REPEAT
 const OnRepeat = async () => {
@@ -12,12 +12,8 @@ const OnRepeat = async () => {
 	// GET THEME
 	const theme = await getTheme();
 	
-	// GET LANGUAGE
-	const language = await getLanguage();
-	
 	// GET DATA
-	const response = await fetch(`http://localhost:1337/api/on-repeat?locale=${language}&populate[song][populate]=*`);
-	const {data} = await response.json();
+	const {data} = await getOnRepeatData();
 	
 	// RENDER
 	return (

@@ -2,17 +2,13 @@
 import './address.scss';
 import Card from '@/components/layouts/card/card';
 import {H2, H3} from '@/components/partials/heading/heading';
-import {getLanguage} from '@/actions/lang';
+import {getAddressData} from '@/services/get-address-data';
 
 // CONTACT ADDRESS
 const Address = async () => {
 	
-	// GET LANGUAGE
-	const language = await getLanguage();
-	
 	// GET DATA
-	const response = await fetch(`http://localhost:1337/api/address?locale=${language}&populate=*`);
-	const {data} = await response.json();
+	const {data} = await getAddressData();
 	
 	// RENDER
 	return (

@@ -9,7 +9,7 @@ const generateMetadata = async() => {
 	const language = await getLanguage();
 	
 	// GET DATA
-	const response = await fetch(`http://localhost:1337/api/metadata?locale=${language}&populate=*`);
+	const response = await fetch(`${process.env.NEXT_PUBLIC_APP_CMS_URI}/api/metadata?locale=${language}&populate=*`);
 	const {data} = await response.json();
 	
 	// RETURN

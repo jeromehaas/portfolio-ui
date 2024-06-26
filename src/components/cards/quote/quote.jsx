@@ -2,17 +2,13 @@
 import './quote.scss';
 import Card from '@/components/layouts/card/card';
 import {P} from '@/components/partials/paragraph/paragraph';
-import {getLanguage} from '@/actions/lang';
+import {getQuoteData} from '@/services/get-quote-data';
 
 // QUOTE
 const Quote = async () => {
 	
-	// GET LANGUAGE
-	const language = await getLanguage();
-	
 	// GET DATA
-	const response = await fetch(`http://localhost:1337/api/quote?locale=${language}`);
-	const {data} = await response.json();
+	const {data} = await getQuoteData();
 	
 	// RETURN
 	return (

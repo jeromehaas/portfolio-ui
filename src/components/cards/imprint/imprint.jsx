@@ -3,18 +3,14 @@ import './imprint.scss';
 import Card from '@/components/layouts/card/card';
 import {H2} from '@/components/partials/heading/heading';
 import {P} from '@/components/partials/paragraph/paragraph';
-import {getLanguage} from '@/actions/lang';
 import {Button} from '@/components/partials/button/button';
+import {getImprintData} from '@/services/get-imprint-data';
 
 // IMPRINT
 const Imprint = async () => {
 	
-	// GET LANGUAGE
-	const language = await getLanguage();
-	
 	// GET DATA
-	const response = await fetch(`http://localhost:1337/api/imprint?locale=${language}&populate=*`);
-	const {data} = await response.json();
+	const {data} = await getImprintData();
 	
 	// RENDER
 	return (

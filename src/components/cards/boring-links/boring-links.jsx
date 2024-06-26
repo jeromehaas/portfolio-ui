@@ -2,18 +2,14 @@
 import './boring-links.scss';
 import Card from '@/components/layouts/card/card';
 import {H2} from '@/components/partials/heading/heading';
-import {getLanguage} from '@/actions/lang';
 import {Button} from '@/components/partials/button/button';
+import {getBoringLinksData} from '@/services/get-boring-links-data';
 
 // BORING LINKS
 const BoringLinks = async() => {
 	
-	// GET LANGUAGE
-	const language = await getLanguage();
-	
 	// GET DATA
-	const response = await fetch(`http://localhost:1337/api/boring-link?locale=${language}&populate=*`);
-	const {data} = await response.json();
+	const {data} = await getBoringLinksData();
 	
 	// RENDER
 	return (

@@ -3,8 +3,8 @@ import './introduction.scss';
 import Image from 'next/image';
 import Card from '@/components/layouts/card/card';
 import {getTheme} from '@/actions/theme';
-import {getLanguage} from '@/actions/lang';
 import {RichText} from '@/components/partials/rich-text/rich-text';
+import {getIntroductionData} from '@/services/get-introduction-data';
 
 // INTRODUCTION
 const Introduction = async () => {
@@ -12,12 +12,8 @@ const Introduction = async () => {
 	// GET THEME
 	const theme = await getTheme();
 	
-	// GET LANGUAGE
-	const language = await getLanguage();
-	
 	// GET DATA
-	const response = await fetch(`http://localhost:1337/api/introduction?locale=${language}`);
-	const {data} = await response.json();
+	const {data} = await getIntroductionData();
 	
 	// RENDER
 	return (
