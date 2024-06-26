@@ -77,9 +77,7 @@ const ProjectSlider = ({className = '', projects = []}) => {
 			))}
 		</Swiper>
 		) : null}
-		
 		<div className='project-slider__pagination pagination'></div>
-		;
 	</div>
 	)
 	;

@@ -4,6 +4,12 @@
 
 	&__slider {
 		width: 100%;
+		cursor: grab;
+
+		&:active {
+			cursor: grabbing;
+		}
+
 	}
 
 	&__slide, .slide {

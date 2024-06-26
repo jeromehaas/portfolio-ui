@@ -68,6 +68,10 @@
 		color: $white-100;
 	}
 
+	.list-item {
+		color: $white-100;
+	}
+
 	.notification {
 
 		&__item {
@@ -194,7 +198,6 @@
 
 			&__item, .item {
 				border: 1px solid $silver-100;
-
 
 				&--active {
 					border: 1px solid $silver-80;

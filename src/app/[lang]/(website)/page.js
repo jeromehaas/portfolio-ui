@@ -22,6 +22,7 @@ import SocialGithub from '@/components/cards/social-github/social-github';
 import OnRepeat from '@/components/cards/on-repeat/on-repeat';
 import CurriculumVitae from '@/components/cards/curriculum-vitae/curriculum-vitae';
 import Plausible from '@/components/elements/plausible/plausible';
+import BoringLinks from '@/components/cards/boring-links/boring-links';
 
 // PAGE
 const Page = () => {
@@ -50,6 +51,7 @@ const Page = () => {
 		<Statistics/>
 		<SocialLinkedin/>
 		<SocialGithub/>
+		<BoringLinks />
 		<Plausible />
 	</Section>
 	);

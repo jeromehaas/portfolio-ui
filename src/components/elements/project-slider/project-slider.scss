@@ -6,6 +6,12 @@
 		height: 600px;
 		margin-bottom: 24px;
 		padding: 1px;
+		cursor: grab;
+
+		&:active {
+			cursor: grabbing;
+		}
+
 	}
 
 	&__slide, .slide {

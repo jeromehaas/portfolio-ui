@@ -3,6 +3,7 @@ import './rich-text.scss';
 import {Highlight} from '@/components/partials/highlight/highlight';
 import {H1, H2, H3, H4} from '@/components/partials/heading/heading';
 import {P} from '@/components/partials/paragraph/paragraph';
+import {Li} from '@/components/partials/list-item/list-item';
 
 // PARAGRAPH
 const RichText = ({className = '', type = 'paragraph', children = null}) => {
@@ -39,6 +40,13 @@ const RichText = ({className = '', type = 'paragraph', children = null}) => {
 					{group.bold ? <Highlight className='paragraph__highlight'>{group.text}</Highlight> : group.text}
 				</P>
 				)}
+				{row.type === 'list' && row?.children?.map((list, index) => (
+				<ul className='rich-text__paragraph paragraph'>
+					{list?.children.map((child, index) => (
+					<Li>{child.text}</Li>
+					))}
+				</ul>
+				))}
 			</span>
 			))}
 		</div>

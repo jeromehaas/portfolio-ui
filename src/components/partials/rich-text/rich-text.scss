@@ -1,5 +1,9 @@
 .rich-text {
 
+	&__row {
+		margin-bottom: 8px;
+	}
+
 	&__paragraph, .paragraph {
 		display: inline !important;
 
