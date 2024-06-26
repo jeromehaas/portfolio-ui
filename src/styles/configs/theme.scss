@@ -173,6 +173,19 @@
 			border: 1px solid $silver-100;
 		}
 
+		&__details, .details {
+
+			&__controller, .controller {
+				background-color: $white-100;
+
+				&__icon {
+					height: 24px;
+
+				}
+			}
+
+		}
+
 	}
 
 	.history {

@@ -1,12 +1,6 @@
 // IMPORTS
 import '@/styles/main.scss';
 
-// METADATA
-const metadata = {
-	title: 'Jerome Haas',
-	description: 'Curious and passionate web developer from Switzerland',
-};
-
 // ROOT-LAYOUT
 const RootLayout = async({children}) => {
 	
@@ -22,6 +16,6 @@ const RootLayout = async({children}) => {
 };
 
 // EXPORTS
-export {metadata};
+//export {metadata};
 export default RootLayout;
 

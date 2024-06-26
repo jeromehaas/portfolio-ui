@@ -3,13 +3,13 @@
 // IMPORTS
 import './music-player.scss';
 import {useEffect, useRef, useState} from 'react';
-import {P} from '@/components/partials/paragraph/paragraph';
-import {Icon} from '@/components/partials/icon/icon';
 import useAudioAnalyser from '@/hooks/use-audio-analyser';
 import {useSearchParams} from 'next/navigation';
+import Image from 'next/image';
+import {P} from '@/components/partials/paragraph/paragraph';
 
 // MUSIC-PLAYER
-const MusicPlayer = ({className = '', song}) => {
+const MusicPlayer = ({className = '', theme}) => {
 	
 	// SETUP STATE
 	const [isPlaying, setIsPlaying] = useState(false);
@@ -22,9 +22,6 @@ const MusicPlayer = ({className = '', song}) => {
 	
 	// GET ANALYSER-NODE
 	const analyserNode = useAudioAnalyser(audioRef, isPlaying);
-	
-	// GET THEME
-	const theme = searchParams.get('theme');
 	
 	// HANDLE TOGGLE PLAY
 	const handleTogglePlay = () => {
@@ -120,7 +117,10 @@ const MusicPlayer = ({className = '', song}) => {
 		<audio ref={audioRef} crossOrigin='anonymous' src='/audio/easy-hike.mp3' onEnded={handleReset}/>
 		<div className='music-player__details details'>
 			<div className='details__controller' onClick={handleTogglePlay}>
-				{isPlaying ? <Icon className='controller__icon' type='pause'/> : <Icon className='controller__icon' type='play'/>}
+				{isPlaying && theme === 'light' && <Image className='controller__icon' src='/icons/light/icon-pause.svg' width={40} height={40} alt='Pause' />}
+				{isPlaying && theme === 'dark' && <Image className='controller__icon' src='/icons/dark/icon-pause.svg' width={40} height={40} alt='Pause' />}
+				{!isPlaying && theme === 'light' && <Image className='controller__icon' src='/icons/light/icon-play.svg' width={40} height={40} alt='Pause' />}
+				{!isPlaying && theme === 'dark' && <Image className='controller__icon' src='/icons/dark/icon-play.svg' width={40} height={40} alt='Pause' />}
 			</div>
 			<P className='details__title'>Easy Hike | Yari</P>
 		</div>
