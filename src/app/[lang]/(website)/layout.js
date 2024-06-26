@@ -2,6 +2,7 @@
 import Site from '@/components/layouts/site/site';
 import {getLanguage} from '@/actions/lang';
 
+// GENERATE METADATA
 const generateMetadata = async() => {
 	
 	// GET LANGUAGE
@@ -11,7 +12,7 @@ const generateMetadata = async() => {
 	const response = await fetch(`http://localhost:1337/api/metadata?locale=${language}&populate=*`);
 	const {data} = await response.json();
 	
-	
+	// RETURN
 	return {
 		metadataBase: new URL(process.env.NEXT_PUBLIC_APP_UI_URI),
 		title: data?.attributes?.title,
@@ -26,10 +27,11 @@ const generateMetadata = async() => {
 			type: 'website',
 		},
 		
-	}
+	};
 	
 };
 
+// SET VIEWPORT SETTINGS
  const viewport = {
 	width: 'device-width',
 	initialScale: 1,
