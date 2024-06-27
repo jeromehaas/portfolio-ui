@@ -1,9 +1,9 @@
 @import '@/styles/configs/variables.scss';
 
 .time {
-	display: grid;
 	grid-column: span 2;
 	grid-row: span 1;
+	display: grid;
 	place-items: center;
 
 	@media(max-width: 1400px) {
