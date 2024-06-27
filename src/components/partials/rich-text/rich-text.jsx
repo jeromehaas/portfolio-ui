@@ -11,10 +11,10 @@ const RichText = ({className = '', children = null}) => {
 	// RENDER
 	return (
 	<div className={`${className} rich-text`}>
-		{children?.map((row, index) => (
-		<div className='rich-text__row' key={index}>
-			{row.children.map((group, index) => (
-			<span className='rich-text__group' key={index}>
+		{children?.map((row, rowIndex) => (
+		<div className='rich-text__row' key={rowIndex}>
+			{row.children.map((group, groupIndex) => (
+			<span className='rich-text__group' key={groupIndex}>
 				{row.type === 'heading' && row.level === 1 && (
 				<H1 className='rich-text__heading heading heading--h1'>
 					{group.bold ? <Highlight className='heading__highlight'>{group.text}</Highlight> : group.text}
@@ -40,10 +40,10 @@ const RichText = ({className = '', children = null}) => {
 					{group.bold ? <Highlight className='paragraph__highlight'>{group.text}</Highlight> : group.text}
 				</P>
 				)}
-				{row.type === 'list' && row?.children?.map((list, index) => (
-				<ul className='rich-text__paragraph paragraph'>
-					{list?.children.map((child, index) => (
-					<Li>{child.text}</Li>
+				{row.type === 'list' && row?.children?.map((list, listIndex) => (
+				<ul className='rich-text__list list' key={`${rowIndex}-${listIndex}`}>
+					{list?.children.map((child, listItemIndex) => (
+					<Li className='rich-text__list-item' key={`${rowIndex}-${listIndex}-${listItemIndex}`}>{child.text}</Li>
 					))}
 				</ul>
 				))}

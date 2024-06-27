@@ -18,7 +18,7 @@ const DataPrivacy = async() => {
 	<Card className='data-privacy'>
 		<H2 className='data-privacy__title'>{data?.attributes?.title}</H2>
 		{data?.attributes?.articles?.map((article) => (
-		<div className='data-privacy__article article'>
+		<div className='data-privacy__article article' key={article?.id}>
 			<P className='article__title paragraph--big paragraph--bold'>{article?.title}</P>
 			<RichText className='article__content'>{article?.content}</RichText>
 		</div>
