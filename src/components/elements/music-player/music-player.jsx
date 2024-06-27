@@ -58,8 +58,8 @@ const MusicPlayer = ({className = '', theme}) => {
 		
 		// CREATE NEW CANVAS
 		let canvas = document.createElement('canvas');
-		canvas.width = 480;
-		canvas.height = 320;
+		canvas.width = 320;
+		canvas.height = 260;
 		container?.appendChild(canvas);
 		
 		// CREATE CONTEXT AND BUFFER
@@ -74,7 +74,7 @@ const MusicPlayer = ({className = '', theme}) => {
 		requestAnimationFrame(renderFrame);
 		
 		// DEFINE BAR-WIDTH
-		let barWidth = (canvas.width / bufferLength) * 8;
+		let barWidth = (canvas.width / bufferLength) * 5;
 		let barHeight;
 		
 		// DEFINE LOOP
