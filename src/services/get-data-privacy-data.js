@@ -3,7 +3,7 @@
 // IMPORTS
 import {getLanguage} from '@/actions/lang';
 
-// GET ACTIVITY-DATA
+// GET DATA-PRIVACY-DATA
 const getDataPrivacyData = async() => {
 	
 	// TRY-CATCH BLOCK

@@ -3,7 +3,7 @@
 // IMPORTS
 import {getLanguage} from '@/actions/lang';
 
-// GET ACTIVITY-DATA
+// GET QUOTE-DATA
 const getQuoteData = async() => {
 	
 	// TRY-CATCH BLOCK

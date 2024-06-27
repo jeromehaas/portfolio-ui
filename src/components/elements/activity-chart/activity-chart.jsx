@@ -3,7 +3,6 @@
 // IMPORTS
 import './activity-chart.scss';
 import {useEffect, useRef, useState} from 'react';
-import {P} from '@/components/partials/paragraph/paragraph';
 
 // ACTIVITY-CHART
 const ActivityChart = ({className = '', events}) => {
@@ -13,8 +12,6 @@ const ActivityChart = ({className = '', events}) => {
 	
 	// SETUP STATE
 	const [viewportWidth, setViewportWidth] = useState();
-	
-
 	
 	// HANDLE RESIZE
 	const handleResize = () => {

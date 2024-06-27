@@ -3,7 +3,7 @@
 // IMPORTS
 import {getLanguage} from '@/actions/lang';
 
-// GET ACTIVITY-DATA
+// GET ERROR-DATA
 const getErrorData = async() => {
 	
 	// TRY-CATCH BLOCK

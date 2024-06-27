@@ -30,6 +30,7 @@ const Icon = ({className = '', type = '', onClick = null}) => {
 	
 };
 
+// EXPORTS
 export {
 	Icon,
 };

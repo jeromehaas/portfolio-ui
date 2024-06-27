@@ -37,7 +37,7 @@ const H3 = ({className, children}) => {
 	
 };
 
-// HEADING H3
+// HEADING H4
 const H4 = ({className, children}) => {
 	
 	// RENDER

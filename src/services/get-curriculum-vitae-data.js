@@ -3,7 +3,7 @@
 // IMPORTS
 import {getLanguage} from '@/actions/lang';
 
-// GET ACTIVITY-DATA
+// GET CURRICULUM-VITAE-DATA
 const getCurriculumVitaeData = async() => {
 	
 	// TRY-CATCH BLOCK

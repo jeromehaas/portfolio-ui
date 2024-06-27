@@ -6,7 +6,7 @@ import {P} from '@/components/partials/paragraph/paragraph';
 import {Li} from '@/components/partials/list-item/list-item';
 
 // PARAGRAPH
-const RichText = ({className = '', type = 'paragraph', children = null}) => {
+const RichText = ({className = '', children = null}) => {
 	
 	// RENDER
 	return (

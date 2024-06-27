@@ -3,7 +3,7 @@
 // IMPORTS
 import {getLanguage} from '@/actions/lang';
 
-// GET ACTIVITY-DATA
+// GET ON-REPEAT-DATA
 const getOnRepeatData = async() => {
 	
 	// TRY-CATCH BLOCK

@@ -3,7 +3,7 @@
 // IMPORTS
 import {getLanguage} from '@/actions/lang';
 
-// GET ACTIVITY-DATA
+// GET IMPRINT-DATA
 const getImprintData = async() => {
 	
 	// TRY-CATCH BLOCK

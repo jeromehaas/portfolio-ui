@@ -28,6 +28,7 @@ const Logo = ({className = '', type = ''}) => {
 	
 };
 
+// EXPORTS
 export {
 	Logo,
 };

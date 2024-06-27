@@ -3,7 +3,7 @@
 // IMPORTS
 import {getLanguage} from '@/actions/lang';
 
-// GET ACTIVITY-DATA
+// GET BORING-LINKS-DATA
 const getBoringLinksData = async() => {
 	
 	// TRY-CATCH BLOCK

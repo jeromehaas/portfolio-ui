@@ -9,7 +9,6 @@ body {
 *::selection {
 	background: transparentize($silver-80, 0.85);
 	opacity: 0.1;
-	text-decoration: 0px underline $silver-100;
 	text-underline: 0px solid $yellow-100;
 	text-decoration: none;
 }

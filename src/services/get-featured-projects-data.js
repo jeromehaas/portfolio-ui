@@ -3,7 +3,7 @@
 // IMPORTS
 import {getLanguage} from '@/actions/lang';
 
-// GET ACTIVITY-DATA
+// GET FEATURED-PROJECTS-DATA
 const getFeaturedProjectsData = async() => {
 	
 	// TRY-CATCH BLOCK

@@ -3,7 +3,7 @@
 // IMPORTS
 import {getLanguage} from '@/actions/lang';
 
-// GET ACTIVITY-DATA
+// GET TECH-STACK-DATA
 const getTechStackData = async() => {
 	
 	// TRY-CATCH BLOCK

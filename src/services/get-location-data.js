@@ -3,7 +3,7 @@
 // IMPORTS
 import {getLanguage} from '@/actions/lang';
 
-// GET ACTIVITY-DATA
+// GET LOCATION-DATA
 const getLocationData = async() => {
 	
 	// TRY-CATCH BLOCK

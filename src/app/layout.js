@@ -16,6 +16,5 @@ const RootLayout = async({children}) => {
 };
 
 // EXPORTS
-//export {metadata};
 export default RootLayout;
 

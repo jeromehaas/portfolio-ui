@@ -18,6 +18,7 @@ const Tapper = ({className = '', type = '', onClick = null}) => {
 	
 };
 
+// EXPORTS
 export {
 	Tapper,
 };

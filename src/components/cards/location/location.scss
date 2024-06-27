@@ -5,8 +5,6 @@
 	grid-row: span 2;
 	min-height: 400px;
 
-
-
 	@media(max-width: 1400px) {
 		grid-column: span 4;
 		grid-row: span 4;
@@ -20,4 +18,5 @@
 	@media(max-width: 800px) {
 		grid-column: span 4;
 	}
+
 }
