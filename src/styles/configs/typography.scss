@@ -118,4 +118,26 @@ input::placeholder {
 
 	}
 
+	.list-item {
+		font-size: 16px;
+	}
+
+	.paragraph {
+		font-size: 16px;
+
+		&--small {
+			font-size: 12px;
+		}
+
+		&--big {
+			font-size: 20px;
+		}
+
+		&--huge {
+			font-size: 80px;
+			line-height: 80px;
+		}
+
+	}
+
 }
