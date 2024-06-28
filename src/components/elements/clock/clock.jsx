@@ -51,7 +51,7 @@ const Clock = ({className = ''}) => {
 		
 		// SET STYLES
 		ctx.strokeStyle = 'black';
-		ctx.lineWidth = 2;
+		ctx.lineWidth = 8;
 		
 		// DRAW
 		for (let num = 1; num <= 12; num++) {
@@ -121,7 +121,7 @@ const Clock = ({className = ''}) => {
 	// RENDER
 	return (
 	<div className={`${className} clock`}>
-		<canvas className='clock__canvas' ref={canvasRef} width={120} height={120}/>
+		<canvas className='clock__canvas' ref={canvasRef} width={400} height={400}/>
 	</div>
 	);
 	
