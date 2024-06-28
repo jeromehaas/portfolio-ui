@@ -38,8 +38,8 @@ const DeviconSlider = ({className = '', devicons = [], theme = 'white'}) => {
 		<Swiper className={`${className} devicon-slider__slider slider`} spaceBetween={24} loop={true} speed={500} autoplay={autoplaySettings} breakpoints={breakpointSettings} modules={[Pagination, Autoplay]}>
 			{devicons.map((devicon, index) => (
 			<SwiperSlide className='devicon-slider__slide slide' key={index}>
-				{ theme === 'light' && <Image className='slide__icon' src={devicon?.black?.data?.attributes.url} width={80} height={80} alt='Devicon' />}
-				{ theme === 'dark' && <Image className='slide__icon' src={devicon?.white?.data?.attributes.url} width={80} height={80} alt='Devicon' />}
+				{theme === 'light' && <Image className='slide__icon' src={devicon?.black?.data?.attributes.url} width={80} height={80} alt='Devicon' loading='eager'/>}
+				{theme === 'dark' && <Image className='slide__icon' src={devicon?.white?.data?.attributes.url} width={80} height={80} alt='Devicon' loading='eager'/>}
 			</SwiperSlide>
 			))}
 		</Swiper>
