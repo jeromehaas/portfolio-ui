@@ -13,4 +13,13 @@
 
 	}
 
+	&__heading, .heading {
+		display: inline !important;
+
+		&__highlight {
+			display: inline !important;
+		}
+
+	}
+
 }
