@@ -19,21 +19,22 @@
 			background-color: $grey-100;
 			border: 2px solid $white-100;
 			border-radius: 50%;
-			height: 16px;
 			position: absolute;
 			transform: translate(-50%, -50%);
+			height: 16px;
 			width: 16px;
 			z-index: 10;
 		}
 
 		&__background {
-			animation: pulse 4s ease-out infinite;
 			background-color: $silver-100;
 			border-radius: 50%;
-			height: 40px;
 			position: absolute;
 			transform: translate(-50%, -50%);
-			width: 40px;
+			height: 0;
+			width: 0;
+			opacity: 0;
+			animation: pulse 6s ease-out infinite;
 		}
 
 	}
