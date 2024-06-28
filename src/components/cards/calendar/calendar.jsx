@@ -25,7 +25,7 @@ const Calendar = async () => {
 	// RENDER
 	return (
 	<Card className='calendar'>
-		<P className='calendar__day paragraph--huge paragraph--bold'>{day}</P>
+		<P className='calendar__day paragraph--huge'>{day}</P>
 		<P className='calendar__month-and-year paragraph--bold paragraph--big'><Highlight className='calendar__month-highlight'>{month}</Highlight> {year}</P>
 	</Card>
 	);

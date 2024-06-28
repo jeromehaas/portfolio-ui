@@ -49,7 +49,7 @@ const History = ({className = '', history = [], theme = 'light'}) => {
 			{history.filter((job) => project === job?.id).map((item) => (
 			<div className='detail__item item' key={item?.id}>
 				<figure className='item__timeline'/>
-				<P className='item__role paragraph--big'>{item?.role}</P>
+				<P className='item__role paragraph--big paragraph--bold'>{item?.role}</P>
 				<P className='item__duration'>{item?.duration}</P>
 				<RichText className='item__description'>{item?.description}</RichText>
 				{ item?.reference && <Button className='item__button button--dark' href={item?.reference?.href} target='_blank'>{item?.reference?.label}</Button>}

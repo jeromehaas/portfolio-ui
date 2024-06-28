@@ -58,8 +58,8 @@ const MusicPlayer = ({className = '', theme}) => {
 		
 		// CREATE NEW CANVAS
 		let canvas = document.createElement('canvas');
-		canvas.width = 320;
-		canvas.height = 260;
+		canvas.width = 800;
+		canvas.height = 240;
 		container?.appendChild(canvas);
 		
 		// CREATE CONTEXT AND BUFFER

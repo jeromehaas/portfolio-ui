@@ -13,9 +13,9 @@ const Insights = ({className = '', insights = []}) => {
 	<div className={`${className} insights`}>
 		{insights.map((item, index) => (
 		<div className='insights__item item' key={index}>
-			<H3 className='item__title'>{item.title}</H3>
+			<P className='item__title paragraph--bold'>{item.title}</P>
 			<figure className='item__line'/>
-			<P className='item__value paragraph--big paragraph--bold'>{item.value}</P>
+			<P className='item__value paragraph--big'>{item.value}</P>
 		</div>
 		))}
 	</div>
