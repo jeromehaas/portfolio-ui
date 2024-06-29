@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v0.1.4] - 30.06.2024
+- Refactor: add client-check for kroki
+- Refactor: improve paddings for small viewports
+- Refactor: reduce tilesize of activity-chart for small viewports
+
 ## [v0.1.3] - 29.06.2024
 - Fix: edges of borders of input-fields
 - Fix: flicker in kroki
