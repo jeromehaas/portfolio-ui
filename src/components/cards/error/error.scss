@@ -7,11 +7,19 @@
 	}
 
 	&__title {
-		margin-bottom: 16px;
+		margin-bottom: 24px;
 	}
 
 	&__text {
 		margin-bottom: 24px;
+	}
+
+	@media(max-width: 600px) {
+
+		&__title {
+			margin-bottom: 16px;
+		}
+
 	}
 
 }

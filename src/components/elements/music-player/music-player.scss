@@ -69,4 +69,12 @@
 
 	}
 
+	@media(max-width: 600px) {
+
+		&__visualizer-wrapper {
+			margin-bottom: 16px;
+		}
+
+	}
+
 }

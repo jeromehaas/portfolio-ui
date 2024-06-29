@@ -74,4 +74,7 @@
 		grid-gap: 40px;
 	}
 
+	@media(max-width: 600px) {
+		grid-gap: 32px;
+	}
 }

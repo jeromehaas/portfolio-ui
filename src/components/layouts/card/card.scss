@@ -8,8 +8,8 @@
 	padding: 32px;
 	position: relative;
 
-	&--dark {
-		background-color: black;
+	@media(max-width: 600px) {
+		padding: 16px;
 	}
 
 }

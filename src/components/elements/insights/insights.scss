@@ -24,4 +24,28 @@
 
 	}
 
+	@media (max-width: 600px) {
+
+		&__item, .item {
+			margin-bottom: 24px;
+
+			&__title {
+				margin-bottom: 8px;
+			}
+
+			&__line {
+				background: linear-gradient(to right, $silver-100, $silver-80);
+				border-radius: 4px;
+				height: 2px;
+				margin-bottom: 8px;
+				width: 100%;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+	}
+
 }

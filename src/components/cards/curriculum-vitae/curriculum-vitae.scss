@@ -15,4 +15,16 @@
 		grid-row: span 4;
 	}
 
+	@media(max-width: 600px) {
+
+		&__title {
+			margin-bottom: 16px;
+		}
+
+		&__text {
+			margin-bottom: 16px;
+		}
+
+	}
+
 }

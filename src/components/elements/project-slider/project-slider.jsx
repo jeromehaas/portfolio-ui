@@ -56,7 +56,7 @@ const ProjectSlider = ({className = '', projects = []}) => {
 		<Swiper className='project-slider__slider slider' slidesPerView={2} autoplay={autoplaySettings} breakpoints={breakpointSettings} loop={true} grid={{rows: 2}} spaceBetween={30} pagination={paginationSettings} modules={[Grid, Pagination, Autoplay]}>
 			{projects.map((project, index) => (
 			<SwiperSlide className='project-slider__slide slide' key={index}>
-				<P className='slide__title paragraph--bold'>{project.tiutle}</P>
+				<P className='slide__title paragraph--bold'>{project.title}</P>
 				<div className='slide__actions actions'>
 					{project.links.length ? project.links.map((link, index) => (
 					<Fragment key={link.id}>
