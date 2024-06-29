@@ -30,6 +30,11 @@
 
 	@media(max-width: 800px) {
 		grid-column: span 4;
+
+		&__chart, .chart {
+			max-height: 120px
+		}
+
 	}
 
 }

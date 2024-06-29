@@ -13,6 +13,14 @@ const ActivityChart = ({className = '', events}) => {
 	// SETUP STATE
 	const [viewportWidth, setViewportWidth] = useState();
 	
+	// SET INTIAL VIEPORT-WIDTH
+	const setInitialViewportWidth = () => {
+		
+		// UPDATE STATE
+		setViewportWidth(window.innerWidth);
+		
+	};
+	
 	// HANDLE RESIZE
 	const handleResize = () => {
 		
@@ -29,8 +37,17 @@ const ActivityChart = ({className = '', events}) => {
 		const context = canvas.getContext('2d');
 		
 		// DEFINE SIZES
-		const squareSize = 20;
-		const padding = 4;
+		let squareSize;
+		let padding;
+		
+		// CHECK VIEWPORT-SIZE
+		if (viewportWidth <= 800) {
+			squareSize = 12;
+			padding = 2;
+		} else {
+			squareSize = 20;
+			padding = 4;
+		}
 		
 		// DEFINE WIDTH AND HEIGHT OF CANVASS
 		canvas.width = canvas.clientWidth;
@@ -106,6 +123,9 @@ const ActivityChart = ({className = '', events}) => {
 	
 	// ON FIRST RENDER
 	useEffect(() => {
+		
+		// SET INITIAL VIEWPORT-WIDTH
+		setInitialViewportWidth();
 		
 		// DRAW CHART
 		drawChart();
