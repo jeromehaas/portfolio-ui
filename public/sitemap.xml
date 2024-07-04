@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://jeromehaas.ch/en/</loc>
+        <changefreq>weekly</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jeromehaas.ch/en/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://jeromehaas.ch/de/"/>
+    </url>
+    <url>
+        <loc>https://jeromehaas.ch/en/imprint</loc>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jeromehaas.ch/en/imprint"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://jeromehaas.ch/de/imprint"/>
+    </url>
+    <url>
+        <loc>https://jeromehaas.ch/en/data-privacy</loc>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jeromehaas.ch/en/data-privacy"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://jeromehaas.ch/de/data-privacy"/>
+    </url>
+    <url>
+        <loc>https://jeromehaas.ch/en/404</loc>
+        <changefreq>never</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jeromehaas.ch/en/404"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://jeromehaas.ch/de/404"/>
+    </url>
+    <url>
+        <loc>https://jeromehaas.ch/de/</loc>
+        <changefreq>weekly</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jeromehaas.ch/en/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://jeromehaas.ch/de/"/>
+    </url>
+    <url>
+        <loc>https://jeromehaas.ch/de/imprint</loc>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jeromehaas.ch/en/imprint"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://jeromehaas.ch/de/imprint"/>
+    </url>
+    <url>
+        <loc>https://jeromehaas.ch/de/data-privacy</loc>
+        <changefreq>monthly</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jeromehaas.ch/en/data-privacy"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://jeromehaas.ch/de/data-privacy"/>
+    </url>
+    <url>
+        <loc>https://jeromehaas.ch/de/404</loc>
+        <changefreq>never</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jeromehaas.ch/en/404"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://jeromehaas.ch/de/404"/>
+    </url>
+</urlset>

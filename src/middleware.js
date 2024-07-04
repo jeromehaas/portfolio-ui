@@ -63,7 +63,7 @@ export const config = {
 	
 	// MATCHER
 	matcher: [
-		'/((?!api|_next/static|_next/image|favicon.ico|fonts|public|documents|audio|graphics|images|logos|brands|icons|references|devicons).*)',
+		'/((?!api|_next/static|_next/image|favicon.ico|fonts|public|documents|audio|graphics|images|logos|brands|icons|references|devicons|sitemap).*)',
 	],
 	
 };
